@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>你的名字 · 个人主页</title>
-  <meta name="description" content="你好，我是你的名字。这里是我的个人主页，记录我的技能、项目与联系方式。" />
+  <title>你的名字 · 一个不会编程的人的作品集</title>
+  <meta name="description" content="我不写代码，代码交给 AI；我负责奇思妙想、定边界和挑毛病。这里记录神经元模拟、人格插件与 AI 工作平台三个实验。" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -21,7 +21,7 @@
     </a>
     <nav class="nav-links" aria-label="主导航">
       <a href="#about">关于</a>
-      <a href="#skills">技能</a>
+      <a href="#skills">方式</a>
       <a href="#projects">项目</a>
       <a href="#contact">联系</a>
     </nav>
@@ -33,7 +33,7 @@
       <div class="hero-inner">
         <span class="pill">
           <span class="pulse" aria-hidden="true"></span>
-          正在寻找新的机会
+          不会编程 · 靠想法和 AI 造东西
         </span>
         <h1>
           你好，我是
@@ -43,12 +43,13 @@
           <span id="typed"></span><span class="caret" aria-hidden="true"></span>
         </p>
         <p class="lead">
-          一句话介绍你自己：我热爱把想法变成可以运行的东西，喜欢在细节里打磨体验，
-          也享受把复杂问题拆成小步骤的过程。
+          我没有系统学过编程，这些项目里的代码几乎全部由 AI 编写。
+          我提供的是另一些东西：冒不完的奇思妙想、定得住的原则边界，
+          以及一句反复出现的「再试一次」。
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="#projects">
-            查看项目
+            看看我在折腾什么
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -63,16 +64,16 @@
 
         <ul class="stats">
           <li>
-            <strong data-count="3" data-suffix="+">0</strong>
-            <span>年经验</span>
+            <strong data-count="3" data-suffix=" 个">0</strong>
+            <span>开源项目</span>
           </li>
           <li>
-            <strong data-count="12" data-suffix="+">0</strong>
-            <span>个项目</span>
+            <strong data-count="49" data-suffix=" 次">0</strong>
+            <span>神经元仓库提交</span>
           </li>
           <li>
             <strong data-count="100" data-suffix="%">0</strong>
-            <span>好奇心</span>
+            <span>代码由 AI 编写</span>
           </li>
         </ul>
       </div>
@@ -80,15 +81,16 @@
       <div class="hero-card" aria-hidden="true">
         <div class="card-bar">
           <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-          <span class="card-title">hello.js</span>
+          <span class="card-title">who-am-i.js</span>
         </div>
         <pre class="code"><code><span class="c-key">const</span> me = {
   <span class="c-prop">name</span>: <span class="c-str">'你的名字'</span>,
-  <span class="c-prop">role</span>: <span class="c-str">'开发者'</span>,
-  <span class="c-prop">stack</span>: [<span class="c-str">'HTML'</span>, <span class="c-str">'CSS'</span>, <span class="c-str">'JS'</span>],
-  <span class="c-prop">focus</span>: <span class="c-str">'把想法做成产品'</span>,
+  <span class="c-prop">code</span>: <span class="c-str">'AI 写的'</span>,
+  <span class="c-prop">ideas</span>: <span class="c-str">'我出的'</span>,
+  <span class="c-prop">bugs</span>: <span class="c-str">'我挑的'</span>,
+  <span class="c-prop">skills</span>: [<span class="c-str">'奇思妙想'</span>, <span class="c-str">'定边界'</span>],
   <span class="c-fn">sayHi</span>() {
-    <span class="c-key">return</span> <span class="c-str">'欢迎来到我的主页 👋'</span>;
+    <span class="c-key">return</span> <span class="c-str">'这个主页也是 AI 写的 👋'</span>;
   }
 };</code></pre>
         <div class="card-glow"></div>
@@ -97,99 +99,134 @@
 
     <section id="about" class="section reveal">
       <p class="eyebrow">01 / 关于我</p>
-      <h2>喜欢折腾，也喜欢把事情做完</h2>
+      <h2>不会编程，但想法很多</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>
-            我是一名开发者，关注网页与交互体验。从想法、设计到上线，我喜欢完整地走一遍流程，
-            并且持续打磨那些别人容易忽略的小细节。
+            我不是程序员，没有系统学过编程，也看不懂神经网络的数学公式。
+            仓库里的代码基本都由 AI 编写——我负责的是提想法、定边界、挑毛病，
+            以及一遍又一遍地说「再改改」。
           </p>
           <p>
-            目前我在学习更系统的工程方法，也在积累自己的作品集。
-            如果你有有趣的想法，欢迎随时找我聊聊。
+            三个项目都是同一个模式：先冒出一个念头，再把它拆成 AI 能执行的步骤，
+            看结果，不对就再来一轮。神经元实验从「能不能让一团神经元记住 200 步之前的奖励」
+            开始，最后跑出了 30 个随机种子全部通过；桌宠插件从「她能不能记住我」开始，
+            做到了跨窗口的人格延续。
+          </p>
+          <p>
+            过程比结果好玩：排查、修复、对着 CSV 曲线发呆，
+            这些才是我真正在做的事。
           </p>
         </div>
         <ul class="facts">
           <li><span>位置</span><strong>中国 · 地球</strong></li>
-          <li><span>方向</span><strong>前端 / 全栈</strong></li>
-          <li><span>状态</span><strong class="ok">可接受合作</strong></li>
-          <li><span>爱好</span><strong>写代码 · 游戏 · 音乐</strong></li>
+          <li><span>编程</span><strong>不会（真的）</strong></li>
+          <li><span>我的角色</span><strong>出想法 · 挑毛病 · 做决定</strong></li>
+          <li><span>代码作者</span><strong>AI</strong></li>
+          <li><span>状态</span><strong class="ok">想法多过时间</strong></li>
         </ul>
       </div>
     </section>
 
     <section id="skills" class="section reveal">
-      <p class="eyebrow">02 / 技能</p>
-      <h2>我用这些工具做东西</h2>
+      <p class="eyebrow">02 / 工作方式</p>
+      <h2>我不会写代码，但我会提要求</h2>
       <div class="skill-grid">
         <article class="skill">
           <div class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="M4 9h16M9 9v11" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13" stroke-linecap="round"/></svg>
           </div>
-          <h3>网页基础</h3>
-          <p>语义化 HTML、现代 CSS 布局、响应式与动效。</p>
-          <div class="tags"><span>HTML5</span><span>CSS3</span><span>Flex / Grid</span></div>
+          <h3>把念头说清楚</h3>
+          <p>一个模糊的奇思妙想，要能被拆成 AI 能执行的步骤，否则永远只是个念头。</p>
+          <div class="tags"><span>拆步骤</span><span>写需求</span><span>追问细节</span></div>
         </article>
         <article class="skill">
           <div class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 6-5 6 5 6M16 6l5 6-5 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5v8l-7 5-7-5Z" stroke-linejoin="round"/></svg>
           </div>
-          <h3>JavaScript</h3>
-          <p>DOM 交互、Canvas 动画、模块化与异步编程。</p>
-          <div class="tags"><span>ES6+</span><span>Canvas</span><span>Fetch</span></div>
+          <h3>定得住边界</h3>
+          <p>外行管不住代码，但管得住原则：主动开口默认关闭、记忆删除必须可恢复。</p>
+          <div class="tags"><span>安全降级</span><span>可恢复</span><span>默认关闭</span></div>
         </article>
         <article class="skill">
           <div class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2" stroke-linecap="round"/></svg>
           </div>
-          <h3>数据与后端</h3>
-          <p>接口调用、数据存储，了解服务端基础概念。</p>
-          <div class="tags"><span>Node.js</span><span>REST API</span><span>SQL</span></div>
+          <h3>看得见毛病</h3>
+          <p>看不代码，但看得懂结果：曲线不对、达标率掉了、行为怪了，就该停下来查。</p>
+          <div class="tags"><span>复现</span><span>对照实验</span><span>回归测试</span></div>
         </article>
         <article class="skill">
           <div class="skill-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 9 5-9 5-9-5 9-5Z" stroke-linejoin="round"/><path d="m3 13 9 5 9-5" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" stroke-linecap="round"/></svg>
           </div>
-          <h3>工具链</h3>
-          <p>版本管理、命令行部署，习惯用工具提升效率。</p>
-          <div class="tags"><span>Git</span><span>GitHub</span><span>Cloudflare</span></div>
+          <h3>用数据说话</h3>
+          <p>142 份实验数据、31 项自动化测试——结论不能靠感觉，得能复现。</p>
+          <div class="tags"><span>CSV 分析</span><span>消融对照</span><span>可复现</span></div>
         </article>
       </div>
     </section>
 
     <section id="projects" class="section reveal">
       <p class="eyebrow">03 / 项目</p>
-      <h2>最近在做的一些东西</h2>
+      <h2>三个把想法变成东西的实验</h2>
       <div class="project-grid">
         <article class="project">
           <div class="project-top">
-            <span class="project-badge">网页</span>
+            <span class="project-badge">C · C++ · Python</span>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>我的第一个网页</h3>
-          <p>用纯 HTML / CSS / JS 写的个人主页，部署在 Cloudflare Workers 上，从零到上线的第一个完整作品。</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <a class="project-link" href="https://github.com/han0han0le0ni/di-yi-ge-wang-ye" target="_blank" rel="noreferrer">查看仓库 →</a>
+          <h3>shen-jing-yuan · 神经元实验</h3>
+          <p>
+            两道自己给自己出的考题：一是「200 步之后才到的奖励，能不能被正确归因」，
+            二是教 2256 个模拟神经元的虚拟机械臂去够目标。没有反向传播，只有脉冲和奖励。
+          </p>
+          <ul class="metrics">
+            <li><strong>100%</strong><span>30 个种子全过</span></li>
+            <li><strong>2256</strong><span>模拟神经元</span></li>
+            <li><strong>6 万+</strong><span>训练回合</span></li>
+          </ul>
+          <div class="tags"><span>脉冲神经网络</span><span>延迟信用分配</span><span>资格迹</span></div>
+          <a class="project-link" href="https://github.com/han0han0le0ni/shen-jing-yuan" target="_blank" rel="noreferrer">查看仓库 →</a>
         </article>
+
         <article class="project">
           <div class="project-top">
-            <span class="project-badge">待补充</span>
+            <span class="project-badge">TypeScript · C#</span>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>项目名称</h3>
-          <p>用一两句话说明这个项目做了什么、解决了什么问题，以及你在其中负责的部分。</p>
-          <div class="tags"><span>标签</span><span>标签</span></div>
-          <a class="project-link" href="#" aria-disabled="true">即将上线 →</a>
+          <h3>dsh-daughter · 人格与记忆插件</h3>
+          <p>
+            给 DSH 做人格演变的插件：人格分层、性格演化、长期记忆、动机双通路、安全降级，
+            再通过自己写的 C# MOD 和 VPet 桌宠联动。最打动我的是「欲言又止」——
+            hold 不是失败，攒够下一次才真开口。
+          </p>
+          <ul class="metrics">
+            <li><strong>4/7</strong><span>外部连接已通</span></li>
+            <li><strong>10</strong><span>个 C# MOD 文件</span></li>
+            <li><strong>跨窗口</strong><span>记忆与人格</span></li>
+          </ul>
+          <div class="tags"><span>长期记忆</span><span>VPet 桌宠</span><span>安全降级</span></div>
+          <a class="project-link" href="https://github.com/han0han0le0ni/dsh-daughter" target="_blank" rel="noreferrer">查看仓库 →</a>
         </article>
+
         <article class="project">
           <div class="project-top">
-            <span class="project-badge">待补充</span>
+            <span class="project-badge">Go</span>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>项目名称</h3>
-          <p>用一两句话说明这个项目做了什么、解决了什么问题，以及你在其中负责的部分。</p>
-          <div class="tags"><span>标签</span><span>标签</span></div>
-          <a class="project-link" href="#" aria-disabled="true">即将上线 →</a>
+          <h3>ai-work-platform · 微内核</h3>
+          <p>
+            用 JSON-RPC over stdio 加载子进程插件的极简内核：核心不认识 AI、不认识 LLM、
+            也不认识 UI，只认识协议和 manifest.json。万物皆插件，连工作台本身也是。
+          </p>
+          <ul class="metrics">
+            <li><strong>150</strong><span>行启动器</span></li>
+            <li><strong>9</strong><span>个内置插件</span></li>
+            <li><strong>0</strong><span>个 HTTP 服务</span></li>
+          </ul>
+          <div class="tags"><span>微内核</span><span>插件化</span><span>终端工作台</span></div>
+          <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">查看仓库 →</a>
         </article>
       </div>
     </section>
@@ -197,7 +234,10 @@
     <section id="contact" class="section reveal">
       <p class="eyebrow">04 / 联系</p>
       <h2>一起做点有意思的事</h2>
-      <p class="contact-lead">不管是合作、提问还是单纯打个招呼，我都很乐意回复。</p>
+      <p class="contact-lead">
+        想聊想法、帮我挑毛病，或者只是打个招呼，都欢迎。
+        有具体的合作方向也直接说——实现的部分我交给 AI，判断的部分我来。
+      </p>
       <div class="contact-grid">
         <a class="contact-card" href="mailto:you@example.com">
           <span class="contact-icon" aria-hidden="true">
@@ -223,7 +263,7 @@
 
   <footer>
     <span>© <span id="year">2026</span> 你的名字</span>
-    <span class="footer-note">Type · Design · Build</span>
+    <span class="footer-note">Ideas by me · Code by AI</span>
   </footer>
 
   <script src="main.js"></script>

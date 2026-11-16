@@ -3,8 +3,8 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---------- 打字机效果：改这里可换职位文案 ---------- */
-const roles = ['前端开发者', '网页爱好者', '独立创造者', '终身学习者'];
+/* ---------- 打字机效果：改这里可换身份文案 ---------- */
+const roles = ['不会编程的开发者', '奇思妙想的提供者', 'AI 的甲方', '神经元实验爱好者'];
 const typedEl = document.getElementById('typed');
 let roleIndex = 0;
 let charIndex = 0;
