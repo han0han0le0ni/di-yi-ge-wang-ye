@@ -1,0 +1,7 @@
+# 工具临时目录
+.codebuddy/
+.trae-html-share-packages/
+
+# 系统文件
+.DS_Store
+Thumbs.db
