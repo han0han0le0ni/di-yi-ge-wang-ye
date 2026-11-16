@@ -180,7 +180,10 @@
             <li><strong>142</strong><span>份可复现数据</span></li>
           </ul>
           <div class="tags"><span>脉冲神经网络</span><span>延迟信用分配</span><span>失败数据保留</span></div>
-          <a class="project-link" href="https://github.com/han0han0le0ni/shen-jing-yuan" target="_blank" rel="noreferrer">查看仓库 →</a>
+          <div class="repo-actions">
+            <button class="repo-jump" type="button" data-repo="neuron">仓库介绍</button>
+            <a class="project-link" href="https://github.com/han0han0le0ni/shen-jing-yuan" target="_blank" rel="noreferrer">GitHub →</a>
+          </div>
         </article>
 
         <article class="project">
@@ -198,7 +201,10 @@
             <li><strong>4/7</strong><span>外部连接</span></li>
           </ul>
           <div class="tags"><span>长期记忆</span><span>VPet 桌宠</span><span>默认关闭</span></div>
-          <a class="project-link" href="https://github.com/han0han0le0ni/dsh-daughter" target="_blank" rel="noreferrer">查看仓库 →</a>
+          <div class="repo-actions">
+            <button class="repo-jump" type="button" data-repo="daughter">仓库介绍</button>
+            <a class="project-link" href="https://github.com/han0han0le0ni/dsh-daughter" target="_blank" rel="noreferrer">GitHub →</a>
+          </div>
         </article>
 
         <article class="project">
@@ -216,7 +222,76 @@
             <li><strong>0</strong><span>个 HTTP 服务</span></li>
           </ul>
           <div class="tags"><span>微内核</span><span>插件自带 UI</span><span>终端工作台</span></div>
-          <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">查看仓库 →</a>
+          <div class="repo-actions">
+            <button class="repo-jump" type="button" data-repo="platform">仓库介绍</button>
+            <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="repo-detail" class="section reveal">
+      <p class="eyebrow">03.5 / 仓库介绍</p>
+      <h2>挑一个仓库，看它到底做了什么</h2>
+
+      <div class="repo-tabs" role="tablist" aria-label="仓库切换">
+        <button class="repo-tab is-active" type="button" role="tab" aria-selected="true" data-repo="neuron">shen-jing-yuan</button>
+        <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="daughter">dsh-daughter</button>
+        <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="platform">ai-work-platform</button>
+      </div>
+
+      <div class="repo-panels">
+        <article class="repo-panel is-active" role="tabpanel" data-panel="neuron">
+          <h3>一团自己玩出来的神经元</h3>
+          <p class="repo-summary">
+            C 语言写的脉冲神经网络「大脑」、C++ 写的实验控制台、Python 写的实时可视化。
+            没有反向传播，只有资格迹、奖励调制和上百份跑出来的 CSV。
+          </p>
+          <ul class="repo-points">
+            <li><strong>延迟奖励：</strong>信号发出 200 步之后奖励才到，30 个随机种子全部 100% 通过，并做了关掉奖励 / 关掉资格迹的消融对照。</li>
+            <li><strong>机械臂：</strong>2256 个模拟神经元靠脉冲控制两个关节，104 次实验、6 万+ 回合后，末端距离首次压到 0.074（达标线 0.141）。</li>
+            <li><strong>工程：</strong>体检时找到并修掉一个真实的内存越界 bug，31 项自动化测试守着，每次运行都写 meta.json 保证可复现。</li>
+          </ul>
+          <div class="repo-foot">
+            <div class="tags"><span>C</span><span>C++</span><span>Python</span><span>脉冲神经网络</span></div>
+            <a class="project-link" href="https://github.com/han0han0le0ni/shen-jing-yuan" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
+          </div>
+        </article>
+
+        <article class="repo-panel" role="tabpanel" data-panel="daughter" hidden>
+          <h3>给 DSH 的长期人格与记忆</h3>
+          <p class="repo-summary">
+            TypeScript 写的「大脑」插件：人格分层、性格演化、长期记忆、运行时状态、技能反射与安全降级。
+            记忆跟着角色走，不跟着会话走——换窗口、换工作区，关系和经历都还在。
+          </p>
+          <ul class="repo-points">
+            <li><strong>人格：</strong>L1–L5 分层结构，外加动机双通路和「欲言又止」的 hold 机制——hold 不是失败，攒够下一次才真开口。</li>
+            <li><strong>记忆：</strong>双路检索 + 带时间感的跨窗口延续；删除可恢复，主动开口默认关闭。</li>
+            <li><strong>边界：</strong>三档安全降级；本机 HTTP 端点不再靠环回地址放行，改用令牌鉴权。</li>
+            <li><strong>落地：</strong>自写 C# MOD 接进 VPet 桌宠，211 项测试全绿，外部连接通了 4/7。</li>
+          </ul>
+          <div class="repo-foot">
+            <div class="tags"><span>TypeScript</span><span>C#</span><span>VPet MOD</span><span>长期记忆</span></div>
+            <a class="project-link" href="https://github.com/han0han0le0ni/dsh-daughter" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
+          </div>
+        </article>
+
+        <article class="repo-panel" role="tabpanel" data-panel="platform" hidden>
+          <h3>只认协议和 manifest 的微内核</h3>
+          <p class="repo-summary">
+            Go 写的极简内核：用 JSON-RPC 2.0 over stdio 加载子进程插件。
+            核心不认识 AI、不认识 LLM、不认识工具，也不启动 HTTP 服务——它只认识协议和插件目录里的 manifest.json。
+          </p>
+          <ul class="repo-points">
+            <li><strong>拆得干净：</strong>LLM、Agent、会话、工具、页面全部是插件，连工作台自己也是插件。</li>
+            <li><strong>契约稳定：</strong>只暴露 6 个基础接口，公开契约只增不减，所有变更重启生效。</li>
+            <li><strong>启动器：</strong>约 150 行，负责标题、拉起 core.exe、带回退出码、避免双实例抢终端。</li>
+            <li><strong>终端即界面：</strong>聊天 / 插件 / 工作区 / 设置四个页面全部在终端里可点，插件清单来自各插件的 manifest.json。</li>
+          </ul>
+          <div class="repo-foot">
+            <div class="tags"><span>Go</span><span>JSON-RPC</span><span>微内核</span><span>终端 TUI</span></div>
+            <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
+          </div>
         </article>
       </div>
     </section>

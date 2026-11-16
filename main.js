@@ -407,3 +407,39 @@ if (particleCanvas && !reduceMotion && window.matchMedia('(pointer: fine)').matc
   resize();
 }
 
+
+/* ---------- 仓库介绍切换 ---------- */
+const repoDetail = document.getElementById('repo-detail');
+
+if (repoDetail) {
+  const repoPanels = [...repoDetail.querySelectorAll('.repo-panel')];
+  const repoTabs = [...repoDetail.querySelectorAll('.repo-tab')];
+
+  const selectRepo = (key, shouldScroll) => {
+    repoTabs.forEach((tab) => {
+      const active = tab.dataset.repo === key;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+    });
+    repoPanels.forEach((panel) => {
+      const active = panel.dataset.panel === key;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+    if (shouldScroll) {
+      const top = repoDetail.getBoundingClientRect().top + window.scrollY - 76;
+      window.scrollTo({
+        top,
+        behavior: reduceMotion ? 'auto' : 'smooth',
+      });
+    }
+  };
+
+  repoTabs.forEach((tab) => {
+    tab.addEventListener('click', () => selectRepo(tab.dataset.repo, false));
+  });
+
+  document.querySelectorAll('.repo-jump').forEach((btn) => {
+    btn.addEventListener('click', () => selectRepo(btn.dataset.repo, true));
+  });
+}
