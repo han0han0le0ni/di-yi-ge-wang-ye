@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>你的名字 · 个人主页</title>
+  <meta name="description" content="你好，我是你的名字。这里是我的个人主页，记录我的技能、项目与联系方式。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <div class="bg-grid" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <!-- ↓ 想换名字就改这里（以及页面里所有「你的名字」） -->
+      你的名字
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#about">关于</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <a class="nav-cta" href="#contact">联系我</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="pill">
+          <span class="pulse" aria-hidden="true"></span>
+          正在寻找新的机会
+        </span>
+        <h1>
+          你好，我是
+          <span class="grad">你的名字</span>
+        </h1>
+        <p class="role" aria-label="我的身份">
+          <span id="typed"></span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="lead">
+          一句话介绍你自己：我热爱把想法变成可以运行的东西，喜欢在细节里打磨体验，
+          也享受把复杂问题拆成小步骤的过程。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">
+            查看项目
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/han0han0le0ni" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <ul class="stats">
+          <li>
+            <strong data-count="3" data-suffix="+">0</strong>
+            <span>年经验</span>
+          </li>
+          <li>
+            <strong data-count="12" data-suffix="+">0</strong>
+            <span>个项目</span>
+          </li>
+          <li>
+            <strong data-count="100" data-suffix="%">0</strong>
+            <span>好奇心</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-card" aria-hidden="true">
+        <div class="card-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="card-title">hello.js</span>
+        </div>
+        <pre class="code"><code><span class="c-key">const</span> me = {
+  <span class="c-prop">name</span>: <span class="c-str">'你的名字'</span>,
+  <span class="c-prop">role</span>: <span class="c-str">'开发者'</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">'HTML'</span>, <span class="c-str">'CSS'</span>, <span class="c-str">'JS'</span>],
+  <span class="c-prop">focus</span>: <span class="c-str">'把想法做成产品'</span>,
+  <span class="c-fn">sayHi</span>() {
+    <span class="c-key">return</span> <span class="c-str">'欢迎来到我的主页 👋'</span>;
+  }
+};</code></pre>
+        <div class="card-glow"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <p class="eyebrow">01 / 关于我</p>
+      <h2>喜欢折腾，也喜欢把事情做完</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            我是一名开发者，关注网页与交互体验。从想法、设计到上线，我喜欢完整地走一遍流程，
+            并且持续打磨那些别人容易忽略的小细节。
+          </p>
+          <p>
+            目前我在学习更系统的工程方法，也在积累自己的作品集。
+            如果你有有趣的想法，欢迎随时找我聊聊。
+          </p>
+        </div>
+        <ul class="facts">
+          <li><span>位置</span><strong>中国 · 地球</strong></li>
+          <li><span>方向</span><strong>前端 / 全栈</strong></li>
+          <li><span>状态</span><strong class="ok">可接受合作</strong></li>
+          <li><span>爱好</span><strong>写代码 · 游戏 · 音乐</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <p class="eyebrow">02 / 技能</p>
+      <h2>我用这些工具做东西</h2>
+      <div class="skill-grid">
+        <article class="skill">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="M4 9h16M9 9v11" stroke-linecap="round"/></svg>
+          </div>
+          <h3>网页基础</h3>
+          <p>语义化 HTML、现代 CSS 布局、响应式与动效。</p>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>Flex / Grid</span></div>
+        </article>
+        <article class="skill">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 6-5 6 5 6M16 6l5 6-5 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>JavaScript</h3>
+          <p>DOM 交互、Canvas 动画、模块化与异步编程。</p>
+          <div class="tags"><span>ES6+</span><span>Canvas</span><span>Fetch</span></div>
+        </article>
+        <article class="skill">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>
+          </div>
+          <h3>数据与后端</h3>
+          <p>接口调用、数据存储，了解服务端基础概念。</p>
+          <div class="tags"><span>Node.js</span><span>REST API</span><span>SQL</span></div>
+        </article>
+        <article class="skill">
+          <div class="skill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 9 5-9 5-9-5 9-5Z" stroke-linejoin="round"/><path d="m3 13 9 5 9-5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>工具链</h3>
+          <p>版本管理、命令行部署，习惯用工具提升效率。</p>
+          <div class="tags"><span>Git</span><span>GitHub</span><span>Cloudflare</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <p class="eyebrow">03 / 项目</p>
+      <h2>最近在做的一些东西</h2>
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-top">
+            <span class="project-badge">网页</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>我的第一个网页</h3>
+          <p>用纯 HTML / CSS / JS 写的个人主页，部署在 Cloudflare Workers 上，从零到上线的第一个完整作品。</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a class="project-link" href="https://github.com/han0han0le0ni/di-yi-ge-wang-ye" target="_blank" rel="noreferrer">查看仓库 →</a>
+        </article>
+        <article class="project">
+          <div class="project-top">
+            <span class="project-badge">待补充</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>项目名称</h3>
+          <p>用一两句话说明这个项目做了什么、解决了什么问题，以及你在其中负责的部分。</p>
+          <div class="tags"><span>标签</span><span>标签</span></div>
+          <a class="project-link" href="#" aria-disabled="true">即将上线 →</a>
+        </article>
+        <article class="project">
+          <div class="project-top">
+            <span class="project-badge">待补充</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>项目名称</h3>
+          <p>用一两句话说明这个项目做了什么、解决了什么问题，以及你在其中负责的部分。</p>
+          <div class="tags"><span>标签</span><span>标签</span></div>
+          <a class="project-link" href="#" aria-disabled="true">即将上线 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <p class="eyebrow">04 / 联系</p>
+      <h2>一起做点有意思的事</h2>
+      <p class="contact-lead">不管是合作、提问还是单纯打个招呼，我都很乐意回复。</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:you@example.com">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="contact-meta">
+            <small>邮箱</small>
+            <strong>you@example.com</strong>
+          </span>
+        </a>
+        <a class="contact-card" href="https://github.com/han0han0le0ni" target="_blank" rel="noreferrer">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg>
+          </span>
+          <span class="contact-meta">
+            <small>GitHub</small>
+            <strong>@han0han0le0ni</strong>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> 你的名字</span>
+    <span class="footer-note">Type · Design · Build</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
