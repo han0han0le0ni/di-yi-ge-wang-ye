@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="no-js">
 <head>
+  <script>document.documentElement.classList.remove('no-js');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>han-han-le-ni · 一个不会编程的人的作品集</title>
-  <meta name="description" content="我不写代码，代码交给 AI；我负责奇思妙想、定边界和挑毛病。这里记录神经元模拟、人格插件与 AI 工作平台三个实验。" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <title>汗汗了你 · 把想法交给 AI 的实验记录</title>
+  <meta name="description" content="汗汗了你（@han0han0le0ni）的个人主页：不写代码，负责想法、边界与验收。记录神经元模拟、DSH 人格记忆插件与 AI 微内核工作台三个长期实验。" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body id="top">
   <div class="bg-grid" aria-hidden="true"></div>
-  <canvas id="particles" aria-hidden="true"></canvas>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="neural-bg" aria-hidden="true"></canvas>
+  <canvas id="pointer-particles" aria-hidden="true"></canvas>
 
   <header class="nav">
     <a class="brand" href="#top">
       <span class="brand-dot" aria-hidden="true"></span>
-      <!-- ↓ 想换名字就改这里，以及页面里其他同名处 -->
-      han-han-le-ni
+      汗汗了你
+      <span class="brand-handle">@han0han0le0ni</span>
     </a>
     <nav class="nav-links" aria-label="主导航">
       <a href="#about">关于</a>
@@ -33,23 +34,22 @@
       <div class="hero-inner">
         <span class="pill">
           <span class="pulse" aria-hidden="true"></span>
-          不会编程 · 靠想法和 AI 造东西
+          不会编程 · 把想法交给 AI 落地
         </span>
         <h1>
           你好，我是
-          <span class="grad">han-han-le-ni</span>
+          <span class="accent">汗汗了你</span>
         </h1>
         <p class="role" aria-label="我的身份">
           <span id="typed"></span><span class="caret" aria-hidden="true"></span>
         </p>
         <p class="lead">
-          我没有系统学过编程，这些项目里的代码几乎全部由 AI 编写。
-          我提供的是另一些东西：冒不完的奇思妙想、定得住的原则边界，
-          以及一句反复出现的「再试一次」。
+          我不写代码，代码交给 AI；我负责把念头说清楚、把边界定住，再把结果挑到能用为止。
+          这里记录的不是教程，而是三个从「要是……会怎样」开始，真的跑起来了的实验。
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="#projects">
-            看看我在折腾什么
+            看三个长期实验
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -58,22 +58,22 @@
             <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true">
               <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
             </svg>
-            GitHub
+            GitHub @han0han0le0ni
           </a>
         </div>
 
         <ul class="stats">
           <li>
-            <strong data-count="3" data-suffix=" 个">0</strong>
-            <span>开源项目</span>
+            <strong data-count="5" data-suffix=" 个">0</strong>
+            <span>公开仓库</span>
           </li>
           <li>
-            <strong data-count="49" data-suffix=" 次">0</strong>
-            <span>神经元仓库提交</span>
+            <strong data-count="211" data-suffix=" 项">0</strong>
+            <span>桌宠测试全绿</span>
           </li>
           <li>
-            <strong data-count="100" data-suffix="%">0</strong>
-            <span>代码由 AI 编写</span>
+            <strong data-count="30" data-suffix="/30">0</strong>
+            <span>延迟奖励种子全过</span>
           </li>
         </ul>
       </div>
@@ -84,44 +84,38 @@
           <span class="card-title">who-am-i.js</span>
         </div>
         <pre class="code"><code><span class="c-key">const</span> me = {
-  <span class="c-prop">name</span>: <span class="c-str">'han-han-le-ni'</span>,
+  <span class="c-prop">name</span>: <span class="c-str">'汗汗了你'</span>,
+  <span class="c-prop">github</span>: <span class="c-str">'@han0han0le0ni'</span>,
   <span class="c-prop">code</span>: <span class="c-str">'AI 写的'</span>,
   <span class="c-prop">ideas</span>: <span class="c-str">'我出的'</span>,
   <span class="c-prop">bugs</span>: <span class="c-str">'我挑的'</span>,
-  <span class="c-prop">skills</span>: [<span class="c-str">'奇思妙想'</span>, <span class="c-str">'定边界'</span>],
+  <span class="c-prop">role</span>: <span class="c-str">'甲方 · 边界员 · 验收员'</span>,
   <span class="c-fn">sayHi</span>() {
-    <span class="c-key">return</span> <span class="c-str">'这个主页也是 AI 写的 👋'</span>;
+    <span class="c-key">return</span> <span class="c-str">'这个主页也是 AI 写的。'</span>;
   }
 };</code></pre>
-        <div class="card-glow"></div>
       </div>
     </section>
 
     <section id="about" class="section reveal">
       <p class="eyebrow">01 / 关于我</p>
-      <h2>不会编程，但想法很多</h2>
+      <h2>不写代码，但把实验做完</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>
-            我不是程序员，没有系统学过编程，也看不懂神经网络的数学公式。
-            仓库里的代码基本都由 AI 编写——我负责的是提想法、定边界、挑毛病，
-            以及一遍又一遍地说「再改改」。
+            我不是程序员，也没系统学过编程。仓库里的代码几乎全部由 AI 生成；我做的是把「要是……会怎样」翻成需求，把「不能这样」写成边界，然后一遍遍验收。
           </p>
           <p>
-            三个项目都是同一个模式：先冒出一个念头，再把它拆成 AI 能执行的步骤，
-            看结果，不对就再来一轮。神经元实验从「能不能让一团神经元记住 200 步之前的奖励」
-            开始，最后跑出了 30 个随机种子全部通过；桌宠插件从「她能不能记住我」开始，
-            做到了跨窗口的人格延续。
+            神经元实验留下了 142 份 CSV 和 31 项测试，30 个随机种子都跨过了 200 步延迟奖励；桌宠插件把 L1–L5 人格分层和长期记忆做进 DSH，211 项测试全绿，外部连接通了 4/7。
           </p>
           <p>
-            过程比结果好玩：排查、修复、对着 CSV 曲线发呆，
-            这些才是我真正在做的事。
+            微内核更像一次收尾练习：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不启动 HTTP 服务。三个项目都在 GitHub 留了完整记录，包括失败的数据。
           </p>
         </div>
         <ul class="facts">
+          <li><span>GitHub</span><strong>@han0han0le0ni · 5 个公开仓库</strong></li>
           <li><span>位置</span><strong>中国 · 地球</strong></li>
-          <li><span>编程</span><strong>不会（真的）</strong></li>
-          <li><span>我的角色</span><strong>出想法 · 挑毛病 · 做决定</strong></li>
+          <li><span>我的角色</span><strong>出想法 · 定边界 · 做验收</strong></li>
           <li><span>代码作者</span><strong>AI</strong></li>
           <li><span>状态</span><strong class="ok">想法多过时间</strong></li>
         </ul>
@@ -153,7 +147,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.2-4.2" stroke-linecap="round"/></svg>
           </div>
           <h3>看得见毛病</h3>
-          <p>看不代码，但看得懂结果：曲线不对、达标率掉了、行为怪了，就该停下来查。</p>
+          <p>看不懂代码，但看得懂结果：曲线不对、达标率掉了、行为怪了，就该停下来查。</p>
           <div class="tags"><span>复现</span><span>对照实验</span><span>回归测试</span></div>
         </article>
         <article class="skill">
@@ -161,7 +155,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" stroke-linecap="round"/></svg>
           </div>
           <h3>用数据说话</h3>
-          <p>142 份实验数据、31 项自动化测试——结论不能靠感觉，得能复现。</p>
+          <p>142 份实验数据、31 项自动化测试，桌宠插件另有 211 项测试——结论不能靠感觉，得能复现。</p>
           <div class="tags"><span>CSV 分析</span><span>消融对照</span><span>可复现</span></div>
         </article>
       </div>
@@ -178,15 +172,14 @@
           </div>
           <h3>shen-jing-yuan · 神经元实验</h3>
           <p>
-            两道自己给自己出的考题：一是「200 步之后才到的奖励，能不能被正确归因」，
-            二是教 2256 个模拟神经元的虚拟机械臂去够目标。没有反向传播，只有脉冲和奖励。
+            自己给自己出了两道题：200 步之后才到的奖励能不能被正确归因；2256 个模拟神经元能不能靠脉冲控制机械臂够到目标。没有反向传播，只有资格迹、奖励调制和一地 CSV。
           </p>
           <ul class="metrics">
-            <li><strong>100%</strong><span>30 个种子全过</span></li>
+            <li><strong>30/30</strong><span>延迟奖励种子全过</span></li>
             <li><strong>2256</strong><span>模拟神经元</span></li>
-            <li><strong>6 万+</strong><span>训练回合</span></li>
+            <li><strong>142</strong><span>份可复现数据</span></li>
           </ul>
-          <div class="tags"><span>脉冲神经网络</span><span>延迟信用分配</span><span>资格迹</span></div>
+          <div class="tags"><span>脉冲神经网络</span><span>延迟信用分配</span><span>失败数据保留</span></div>
           <a class="project-link" href="https://github.com/han0han0le0ni/shen-jing-yuan" target="_blank" rel="noreferrer">查看仓库 →</a>
         </article>
 
@@ -197,35 +190,32 @@
           </div>
           <h3>dsh-daughter · 人格与记忆插件</h3>
           <p>
-            给 DSH 做人格演变的插件：人格分层、性格演化、长期记忆、动机双通路、安全降级，
-            再通过自己写的 C# MOD 和 VPet 桌宠联动。最打动我的是「欲言又止」——
-            hold 不是失败，攒够下一次才真开口。
+            给 DSH 的长期人格与记忆插件：L1–L5 人格分层、双路记忆检索、动机双通路和三档安全降级，再通过 C# MOD 接进 VPet。最打动人的是「欲言又止」——hold 不是失败。
           </p>
           <ul class="metrics">
-            <li><strong>4/7</strong><span>外部连接已通</span></li>
-            <li><strong>10</strong><span>个 C# MOD 文件</span></li>
-            <li><strong>跨窗口</strong><span>记忆与人格</span></li>
+            <li><strong>211</strong><span>项测试全绿</span></li>
+            <li><strong>L1–L5</strong><span>人格分层</span></li>
+            <li><strong>4/7</strong><span>外部连接</span></li>
           </ul>
-          <div class="tags"><span>长期记忆</span><span>VPet 桌宠</span><span>安全降级</span></div>
+          <div class="tags"><span>长期记忆</span><span>VPet 桌宠</span><span>默认关闭</span></div>
           <a class="project-link" href="https://github.com/han0han0le0ni/dsh-daughter" target="_blank" rel="noreferrer">查看仓库 →</a>
         </article>
 
         <article class="project">
           <div class="project-top">
-            <span class="project-badge">Go</span>
+            <span class="project-badge">Go · JSON-RPC</span>
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>ai-work-platform · 微内核</h3>
+          <h3>ai-work-platform · 微内核工作台</h3>
           <p>
-            用 JSON-RPC over stdio 加载子进程插件的极简内核：核心不认识 AI、不认识 LLM、
-            也不认识 UI，只认识协议和 manifest.json。万物皆插件，连工作台本身也是。
+            极简微内核：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不认识 UI。LLM、Agent、会话、工具和页面都拆成插件，连工作台本身也是插件。
           </p>
           <ul class="metrics">
-            <li><strong>150</strong><span>行启动器</span></li>
-            <li><strong>9</strong><span>个内置插件</span></li>
+            <li><strong>6</strong><span>个基础接口</span></li>
+            <li><strong>13</strong><span>个官方插件</span></li>
             <li><strong>0</strong><span>个 HTTP 服务</span></li>
           </ul>
-          <div class="tags"><span>微内核</span><span>插件化</span><span>终端工作台</span></div>
+          <div class="tags"><span>微内核</span><span>插件自带 UI</span><span>终端工作台</span></div>
           <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">查看仓库 →</a>
         </article>
       </div>
@@ -235,17 +225,16 @@
       <p class="eyebrow">04 / 联系</p>
       <h2>一起做点有意思的事</h2>
       <p class="contact-lead">
-        想聊想法、帮我挑毛病，或者只是打个招呼，都欢迎。
-        有具体的合作方向也直接说——实现的部分我交给 AI，判断的部分我来。
+        我不公开邮箱；最方便的是在 GitHub 开 Issue，或者直接去仓库看记录。想聊想法、帮我挑毛病，或者只是打个招呼都欢迎——实现交给 AI，判断我来。
       </p>
       <div class="contact-grid">
-        <a class="contact-card" href="mailto:you@example.com">
+        <a class="contact-card" href="https://github.com/han0han0le0ni/dsh-daughter/issues" target="_blank" rel="noreferrer">
           <span class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-8 8H7l-4 2 1.5-4.5A8 8 0 1 1 21 12Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
           <span class="contact-meta">
-            <small>邮箱</small>
-            <strong>you@example.com</strong>
+            <small>GitHub Issue</small>
+            <strong>dsh-daughter / issues</strong>
           </span>
         </a>
         <a class="contact-card" href="https://github.com/han0han0le0ni" target="_blank" rel="noreferrer">
@@ -262,7 +251,7 @@
   </main>
 
   <footer>
-    <span>© <span id="year">2026</span> han-han-le-ni</span>
+    <span>© <span id="year">2026</span> 汗汗了你</span>
     <span class="footer-note">Ideas by me · Code by AI</span>
   </footer>
 
