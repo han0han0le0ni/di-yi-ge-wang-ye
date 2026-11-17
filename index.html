@@ -68,7 +68,7 @@
             <span>公开仓库</span>
           </li>
           <li>
-            <strong data-count="211" data-suffix=" 项">0</strong>
+            <strong data-count="309" data-suffix=" 项">0</strong>
             <span>桌宠测试全绿</span>
           </li>
           <li>
@@ -106,7 +106,7 @@
             我不是程序员，也没系统学过编程。仓库里的代码几乎全部由 AI 生成；我做的是把「要是……会怎样」翻成需求，把「不能这样」写成边界，然后一遍遍验收。
           </p>
           <p>
-            神经元实验留下了 142 份 CSV 和 31 项测试，30 个随机种子都跨过了 200 步延迟奖励；桌宠插件把 L1–L5 人格分层和长期记忆做进 DSH，211 项测试全绿，外部连接通了 4/7。
+            神经元实验留下了 142 份 CSV 和 31 项测试，30 个随机种子都跨过了 200 步延迟奖励；桌宠插件把 L1–L5 人格分层和长期记忆做进 DSH，309 项测试全绿，外部连接通了 4/7。
           </p>
           <p>
             微内核更像一次收尾练习：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不启动 HTTP 服务。三个项目都在 GitHub 留了完整记录，包括失败的数据。
@@ -155,7 +155,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" stroke-linecap="round"/></svg>
           </div>
           <h3>用数据说话</h3>
-          <p>142 份实验数据、31 项自动化测试，桌宠插件另有 211 项测试——结论不能靠感觉，得能复现。</p>
+          <p>142 份实验数据、31 项自动化测试，桌宠插件另有 309 项测试——结论不能靠感觉，得能复现。</p>
           <div class="tags"><span>CSV 分析</span><span>消融对照</span><span>可复现</span></div>
         </article>
       </div>
@@ -172,12 +172,12 @@
           </div>
           <h3>shen-jing-yuan · 神经元实验</h3>
           <p>
-            自己给自己出了两道题：200 步之后才到的奖励能不能被正确归因；2256 个模拟神经元能不能靠脉冲控制机械臂够到目标。没有反向传播，只有资格迹、奖励调制和一地 CSV。
+            自己出了两道题：200 步之后才到的奖励能不能被正确归因；2256 个神经元、44401 条突触能不能靠脉冲把机械臂够到目标。没有反向传播，只有资格迹、奖励调制和一地 CSV——包括没跑通的那部分。
           </p>
           <ul class="metrics">
             <li><strong>30/30</strong><span>延迟奖励种子全过</span></li>
-            <li><strong>2256</strong><span>模拟神经元</span></li>
-            <li><strong>142</strong><span>份可复现数据</span></li>
+            <li><strong>2256</strong><span>神经元 · 44401 突触</span></li>
+            <li><strong>0.074</strong><span>机械臂单次最好 · 未达标</span></li>
           </ul>
           <div class="tags"><span>脉冲神经网络</span><span>延迟信用分配</span><span>失败数据保留</span></div>
           <div class="repo-actions">
@@ -193,10 +193,10 @@
           </div>
           <h3>dsh-daughter · 人格与记忆插件</h3>
           <p>
-            给 DSH 的长期人格与记忆插件：L1–L5 人格分层、双路记忆检索、动机双通路和三档安全降级，再通过 C# MOD 接进 VPet。最打动人的是「欲言又止」——hold 不是失败。
+            给 DSH 的长期人格与记忆：L1–L5 人格分层、摘要层与全文层双路检索、动机双通路、三档安全降级，再通过 C# MOD 接进 VPet。最打动人的是「欲言又止」——hold 不是失败，是在攒下一次开口。
           </p>
           <ul class="metrics">
-            <li><strong>211</strong><span>项测试全绿</span></li>
+            <li><strong>309</strong><span>项测试全绿</span></li>
             <li><strong>L1–L5</strong><span>人格分层</span></li>
             <li><strong>4/7</strong><span>外部连接</span></li>
           </ul>
@@ -214,11 +214,11 @@
           </div>
           <h3>ai-work-platform · 微内核工作台</h3>
           <p>
-            极简微内核：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不认识 UI。LLM、Agent、会话、工具和页面都拆成插件，连工作台本身也是插件。
+            极简微内核：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不认识 UI。LLM、Agent、会话、工具和页面全拆成插件，连工作台本身也是——只有「聊天」这一页是内核固定的。
           </p>
           <ul class="metrics">
+            <li><strong>12</strong><span>个插件在跑 · 0 跳过</span></li>
             <li><strong>6</strong><span>个基础接口</span></li>
-            <li><strong>13</strong><span>个官方插件</span></li>
             <li><strong>0</strong><span>个 HTTP 服务</span></li>
           </ul>
           <div class="tags"><span>微内核</span><span>插件自带 UI</span><span>终端工作台</span></div>
@@ -245,15 +245,15 @@
           <h3>一团自己玩出来的神经元</h3>
           <p class="repo-summary">
             C 语言写的脉冲神经网络「大脑」、C++ 写的实验控制台、Python 写的实时可视化。
-            没有反向传播，只有资格迹、奖励调制和上百份跑出来的 CSV。
+            2256 个神经元、44401 条突触，没有反向传播，只有资格迹、奖励调制和 142 份跑出来的数据。
           </p>
           <ul class="repo-points">
             <li><strong>延迟奖励：</strong>信号发出 200 步之后奖励才到，30 个随机种子全部 100% 通过，并做了关掉奖励 / 关掉资格迹的消融对照。</li>
-            <li><strong>机械臂：</strong>2256 个模拟神经元靠脉冲控制两个关节，104 次实验、6 万+ 回合后，末端距离首次压到 0.074（达标线 0.141）。</li>
-            <li><strong>工程：</strong>体检时找到并修掉一个真实的内存越界 bug，31 项自动化测试守着，每次运行都写 meta.json 保证可复现。</li>
+            <li><strong>机械臂：</strong>104 次实验、6 万+ 回合，单次最好末端距离 0.074，但中位数 0.65、阈值 0.20——没有正式达标，原始数据一份没删。</li>
+            <li><strong>工程：</strong>体检时找到并修掉一个真实的内存越界 bug；31 项自动化测试，每次运行写 .meta.json 锁死超参，另有 fix1 / fix2 / fix3 三档修复预设可复跑。</li>
           </ul>
           <div class="repo-foot">
-            <div class="tags"><span>C</span><span>C++</span><span>Python</span><span>脉冲神经网络</span></div>
+            <div class="tags"><span>C</span><span>C++</span><span>Python</span><span>44401 突触</span></div>
             <a class="project-link" href="https://github.com/han0han0le0ni/shen-jing-yuan" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
           </div>
         </article>
@@ -261,17 +261,18 @@
         <article class="repo-panel" role="tabpanel" data-panel="daughter" hidden>
           <h3>给 DSH 的长期人格与记忆</h3>
           <p class="repo-summary">
-            TypeScript 写的「大脑」插件：人格分层、性格演化、长期记忆、运行时状态、技能反射与安全降级。
+            TypeScript 写的「大脑」插件（v0.8.0）：人格分层、性格演化、长期记忆、运行时状态、技能反射与安全降级，表现层交给桌宠端。
             记忆跟着角色走，不跟着会话走——换窗口、换工作区，关系和经历都还在。
           </p>
           <ul class="repo-points">
-            <li><strong>人格：</strong>L1–L5 分层结构，外加动机双通路和「欲言又止」的 hold 机制——hold 不是失败，攒够下一次才真开口。</li>
-            <li><strong>记忆：</strong>双路检索 + 带时间感的跨窗口延续；删除可恢复，主动开口默认关闭。</li>
-            <li><strong>边界：</strong>三档安全降级；本机 HTTP 端点不再靠环回地址放行，改用令牌鉴权。</li>
-            <li><strong>落地：</strong>自写 C# MOD 接进 VPet 桌宠，211 项测试全绿，外部连接通了 4/7。</li>
+            <li><strong>人格：</strong>L1–L5 分层，L1–L4 慢写回、L5 不写回；动机双通路（阈值偏移 + 方向舵乘子），外加熟悉度倒 U 和失败熔断。</li>
+            <li><strong>记忆：</strong>摘要层 + 全文层双路检索，SQLite FTS5 trigram 配 Dice 相似度，五维加权并支持一二跳联想；删除可恢复，主动开口默认关闭。</li>
+            <li><strong>节奏：</strong>hold 是攒劲而不是丢弃，思念饱和度按 idle/(idle+180min) 算——攒够一次才真的开口，文案是模板，不冒充模型生成。</li>
+            <li><strong>边界：</strong>三档安全降级；本机 HTTP 端点改用 32 字节令牌鉴权（0600 权限），只有 /health 免令牌。</li>
+            <li><strong>落地：</strong>10 个 .cs 加 info.lps 组成 VPet MOD，5 个 DLL；游戏侧 11074、注入预算 3000 tokens；309 项测试全绿，外部连接通了 4/7。</li>
           </ul>
           <div class="repo-foot">
-            <div class="tags"><span>TypeScript</span><span>C#</span><span>VPet MOD</span><span>长期记忆</span></div>
+            <div class="tags"><span>TypeScript</span><span>C#</span><span>SQLite FTS5</span><span>VPet MOD</span></div>
             <a class="project-link" href="https://github.com/han0han0le0ni/dsh-daughter" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
           </div>
         </article>
@@ -279,14 +280,15 @@
         <article class="repo-panel" role="tabpanel" data-panel="platform" hidden>
           <h3>只认协议和 manifest 的微内核</h3>
           <p class="repo-summary">
-            Go 写的极简内核：用 JSON-RPC 2.0 over stdio 加载子进程插件。
-            核心不认识 AI、不认识 LLM、不认识工具，也不启动 HTTP 服务——它只认识协议和插件目录里的 manifest.json。
+            Go 写的极简内核：用 JSON-RPC 2.0 over stdio 拉起子进程插件，插件靠 manifest.json 自我介绍。
+            核心不认识 AI、不认识工具、不启动 HTTP 服务——12 个插件在跑，0 个被跳过。
           </p>
           <ul class="repo-points">
-            <li><strong>拆得干净：</strong>LLM、Agent、会话、工具、页面全部是插件，连工作台自己也是插件。</li>
-            <li><strong>契约稳定：</strong>只暴露 6 个基础接口，公开契约只增不减，所有变更重启生效。</li>
-            <li><strong>启动器：</strong>约 150 行，负责标题、拉起 core.exe、带回退出码、避免双实例抢终端。</li>
-            <li><strong>终端即界面：</strong>聊天 / 插件 / 工作区 / 设置四个页面全部在终端里可点，插件清单来自各插件的 manifest.json。</li>
+            <li><strong>内核：</strong>只有 6 个基础接口（provide / consume / invoke / emit / on / config），外加 core.invoke 转发；公开契约只增不减。</li>
+            <li><strong>界面：</strong>只有「聊天」是内核固定的，其余 6 个页面由插件通过 ui.page.* 自己带出来，共 7 页。</li>
+            <li><strong>权限：</strong>能力代理带权限闸门、路径围栏和审计，未声明的调用返回 -32002；core.unload 支持热卸载，是唯一的运行时更新例外。</li>
+            <li><strong>体量：</strong>启动器约 150 行，SDK 覆盖 Go / Python / Java / C；核心 3694 行，已经超出自己定的 2000 行上限。</li>
+            <li><strong>限制：</strong>没有沙箱、没有签名验证，权限闸门是协作式的——插件仍可绕过直调系统 API，这一点写在 README 里。</li>
           </ul>
           <div class="repo-foot">
             <div class="tags"><span>Go</span><span>JSON-RPC</span><span>微内核</span><span>终端 TUI</span></div>
