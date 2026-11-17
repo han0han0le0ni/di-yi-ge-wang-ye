@@ -264,6 +264,33 @@
 
       <div class="repo-panels">
         <article class="repo-panel is-active" role="tabpanel" data-panel="neuron">
+          <div class="repo-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 160" fill="none" preserveAspectRatio="xMidYMid meet">
+              <g stroke="currentColor" stroke-opacity="0.22" stroke-width="1.2">
+                <path d="M70 112 168 64 252 120 340 52 430 110 520 70 588 118" />
+                <path d="M168 64 118 22" />
+                <path d="M252 120 300 150" />
+                <path d="M430 110 468 34" />
+              </g>
+              <g fill="currentColor">
+                <circle class="rv-node" cx="70" cy="112" r="6" />
+                <circle class="rv-node" cx="168" cy="64" r="5" style="animation-delay:.5s" />
+                <circle class="rv-node" cx="252" cy="120" r="6.5" style="animation-delay:1s" />
+                <circle class="rv-node" cx="340" cy="52" r="5" style="animation-delay:1.5s" />
+                <circle class="rv-node" cx="430" cy="110" r="6" style="animation-delay:2s" />
+                <circle class="rv-node" cx="520" cy="70" r="5" style="animation-delay:2.5s" />
+                <circle class="rv-node" cx="588" cy="118" r="5.5" style="animation-delay:3s" />
+                <circle class="rv-node" cx="118" cy="22" r="4" style="animation-delay:1.2s" />
+                <circle class="rv-node" cx="300" cy="150" r="4" style="animation-delay:2.2s" />
+                <circle class="rv-node" cx="468" cy="34" r="4" style="animation-delay:.7s" />
+              </g>
+              <g fill="currentColor">
+                <circle r="3.4"><animateMotion dur="3s" repeatCount="indefinite" path="M70 112 168 64 252 120 340 52 430 110 520 70 588 118" /></circle>
+                <circle r="2.6" fill-opacity="0.55"><animateMotion dur="4.2s" begin="1.2s" repeatCount="indefinite" path="M168 64 252 120 340 52" /></circle>
+                <circle r="2.2" fill-opacity="0.4"><animateMotion dur="5s" begin="2.4s" repeatCount="indefinite" path="M430 110 468 34" /></circle>
+              </g>
+            </svg>
+          </div>
           <h3>一团自己玩出来的神经元</h3>
           <p class="repo-summary">
             C 语言写的脉冲神经网络「大脑」、C++ 写的实验控制台、Python 写的实时可视化。
@@ -281,6 +308,37 @@
         </article>
 
         <article class="repo-panel" role="tabpanel" data-panel="daughter" hidden>
+          <div class="repo-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 160" fill="none">
+              <g stroke="currentColor">
+                <circle cx="320" cy="80" r="34" stroke-opacity="0.2" />
+                <circle cx="320" cy="80" r="52" stroke-opacity="0.1" stroke-dasharray="2 7" />
+              </g>
+              <circle class="rv-core" cx="320" cy="80" r="17" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-opacity="0.55" />
+              <circle cx="320" cy="80" r="5" fill="currentColor" />
+              <g fill="currentColor">
+                <circle r="3"><animateMotion dur="9s" repeatCount="indefinite" path="M320 80 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0" /></circle>
+                <circle r="2.2" fill-opacity="0.6"><animateMotion dur="13s" begin="2.5s" repeatCount="indefinite" path="M320 80 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0" /></circle>
+              </g>
+              <g fill="currentColor" fill-opacity="0.25">
+                <rect x="34" y="30" width="46" height="16" rx="8" />
+                <rect x="52" y="66" width="38" height="14" rx="7" />
+                <rect x="30" y="102" width="52" height="16" rx="8" />
+              </g>
+              <g class="rv-bubble">
+                <rect x="392" y="34" width="66" height="30" rx="15" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.35" />
+                <circle cx="413" cy="49" r="2.6" fill="currentColor" />
+                <circle cx="425" cy="49" r="2.6" fill="currentColor" fill-opacity="0.7" />
+                <circle cx="437" cy="49" r="2.6" fill="currentColor" fill-opacity="0.4" />
+              </g>
+              <g class="rv-bubble" style="animation-delay:3.5s">
+                <rect x="404" y="86" width="48" height="26" rx="13" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-opacity="0.25" />
+                <circle cx="417" cy="99" r="2.2" fill="currentColor" fill-opacity="0.7" />
+                <circle cx="428" cy="99" r="2.2" fill="currentColor" fill-opacity="0.45" />
+                <circle cx="439" cy="99" r="2.2" fill="currentColor" fill-opacity="0.25" />
+              </g>
+            </svg>
+          </div>
           <h3>给 DSH 的长期人格与记忆</h3>
           <p class="repo-summary">
             TypeScript 写的「大脑」插件（v0.8.0）：人格分层、性格演化、长期记忆、运行时状态、技能反射与安全降级，表现层交给桌宠端。
@@ -300,6 +358,37 @@
         </article>
 
         <article class="repo-panel" role="tabpanel" data-panel="platform" hidden>
+          <div class="repo-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 160" fill="none">
+              <g stroke="currentColor" stroke-opacity="0.22" stroke-width="1.2">
+                <path d="M170 52 H250" />
+                <path d="M170 108 H250" />
+                <path d="M390 52 H470" />
+                <path d="M390 108 H470" />
+                <path d="M320 46 V114" stroke-dasharray="3 6" stroke-opacity="0.12" />
+              </g>
+              <rect x="250" y="48" width="140" height="64" rx="10" stroke="currentColor" stroke-opacity="0.45" fill="currentColor" fill-opacity="0.06" />
+              <text x="320" y="85" text-anchor="middle" font-size="11" letter-spacing="1" fill="currentColor" fill-opacity="0.8" font-family="ui-monospace, monospace">CORE</text>
+              <g stroke="currentColor" stroke-opacity="0.35" fill="currentColor" fill-opacity="0.05">
+                <rect x="80" y="38" width="90" height="28" rx="7" />
+                <rect x="80" y="94" width="90" height="28" rx="7" />
+                <rect x="470" y="38" width="90" height="28" rx="7" />
+                <rect x="470" y="94" width="90" height="28" rx="7" />
+              </g>
+              <g fill="currentColor" fill-opacity="0.55" font-size="9" text-anchor="middle" font-family="ui-monospace, monospace">
+                <text x="125" y="56">plugin</text>
+                <text x="125" y="112">plugin</text>
+                <text x="515" y="56">plugin</text>
+                <text x="515" y="112">plugin</text>
+              </g>
+              <g fill="currentColor">
+                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" repeatCount="indefinite" path="M170 52 H250" /></rect>
+                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" begin="0.5s" repeatCount="indefinite" path="M170 108 H250" /></rect>
+                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M390 52 H470" /></rect>
+                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" begin="1.6s" repeatCount="indefinite" path="M390 108 H470" /></rect>
+              </g>
+            </svg>
+          </div>
           <h3>只认协议和 manifest 的微内核</h3>
           <p class="repo-summary">
             Go 写的极简内核：用 JSON-RPC 2.0 over stdio 拉起子进程插件，插件靠 manifest.json 自我介绍。
@@ -319,6 +408,31 @@
         </article>
 
         <article class="repo-panel" role="tabpanel" data-panel="app" hidden>
+          <div class="repo-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 160" fill="none">
+              <rect x="150" y="28" width="80" height="104" rx="12" stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.04" />
+              <rect x="178" y="36" width="24" height="3" rx="1.5" fill="currentColor" fill-opacity="0.35" />
+              <rect x="164" y="50" width="52" height="10" rx="5" fill="currentColor" fill-opacity="0.16" />
+              <rect x="164" y="66" width="40" height="10" rx="5" fill="currentColor" fill-opacity="0.1" />
+              <rect x="176" y="82" width="40" height="10" rx="5" fill="currentColor" fill-opacity="0.16" />
+              <rect x="164" y="98" width="46" height="10" rx="5" fill="currentColor" fill-opacity="0.1" />
+              <rect x="182" y="120" width="16" height="4" rx="2" fill="currentColor" fill-opacity="0.4" />
+              <g stroke="currentColor" stroke-opacity="0.18" stroke-dasharray="3 6">
+                <path d="M232 102 H258" />
+                <path d="M232 118 H272" />
+              </g>
+              <g>
+                <rect class="rv-msg" x="270" y="38" width="128" height="24" rx="12" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-opacity="0.28" />
+                <rect class="rv-msg" style="animation-delay:1.6s" x="316" y="76" width="150" height="24" rx="12" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-opacity="0.22" />
+                <rect class="rv-msg" style="animation-delay:3.2s" x="286" y="114" width="112" height="24" rx="12" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-opacity="0.28" />
+              </g>
+              <g fill="currentColor" fill-opacity="0.45" font-size="9" font-family="ui-monospace, monospace">
+                <text x="500" y="52">local</text>
+                <text x="500" y="90">FTS5</text>
+                <text x="500" y="128">no server</text>
+              </g>
+            </svg>
+          </div>
           <h3>一个能离线运行的手机角色扮演应用</h3>
           <p class="repo-summary">
             Kotlin + Jetpack Compose 写的安卓应用（v1.2.8）：角色、会话、消息、记忆全部存在本机 Room 数据库，
