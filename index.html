@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>汗汗了你 · 把想法交给 AI 的实验记录</title>
-  <meta name="description" content="汗汗了你（@han0han0le0ni）的个人主页：不写代码，负责想法、边界与验收。记录神经元模拟、DSH 人格记忆插件与 AI 微内核工作台三个长期实验。" />
+  <meta name="description" content="汗汗了你（@han0han0le0ni）的个人主页：不写代码，负责想法、边界与验收。记录神经元模拟、DSH 人格记忆插件、AI 微内核工作台和安卓角色扮演 App 四个长期实验。" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -45,11 +45,11 @@
         </p>
         <p class="lead">
           我不写代码，代码交给 AI；我负责把念头说清楚、把边界定住，再把结果挑到能用为止。
-          这里记录的不是教程，而是三个从「要是……会怎样」开始，真的跑起来了的实验。
+          这里记录的不是教程，而是四个从「要是……会怎样」开始，真的跑起来了的实验。
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="#projects">
-            看三个长期实验
+            看四个长期实验
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -64,7 +64,7 @@
 
         <ul class="stats">
           <li>
-            <strong data-count="5" data-suffix=" 个">0</strong>
+            <strong data-count="6" data-suffix=" 个">0</strong>
             <span>公开仓库</span>
           </li>
           <li>
@@ -109,11 +109,11 @@
             神经元实验留下了 142 份 CSV 和 31 项测试，30 个随机种子都跨过了 200 步延迟奖励；桌宠插件把 L1–L5 人格分层和长期记忆做进 DSH，309 项测试全绿，外部连接通了 4/7。
           </p>
           <p>
-            微内核更像一次收尾练习：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不启动 HTTP 服务。三个项目都在 GitHub 留了完整记录，包括失败的数据。
+            微内核更像一次收尾练习：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不启动 HTTP 服务。还有一个真能装进手机的安卓角色扮演 App，数据全在本机。四个项目都在 GitHub 留了完整记录，包括失败的数据。
           </p>
         </div>
         <ul class="facts">
-          <li><span>GitHub</span><strong>@han0han0le0ni · 5 个公开仓库</strong></li>
+          <li><span>GitHub</span><strong>@han0han0le0ni · 6 个公开仓库</strong></li>
           <li><span>位置</span><strong>中国 · 地球</strong></li>
           <li><span>我的角色</span><strong>出想法 · 定边界 · 做验收</strong></li>
           <li><span>代码作者</span><strong>AI</strong></li>
@@ -163,7 +163,7 @@
 
     <section id="projects" class="section reveal">
       <p class="eyebrow">03 / 项目</p>
-      <h2>三个把想法变成东西的实验</h2>
+      <h2>四个把想法变成东西的实验</h2>
       <div class="project-grid">
         <article class="project">
           <div class="project-top">
@@ -227,6 +227,27 @@
             <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">GitHub →</a>
           </div>
         </article>
+
+        <article class="project">
+          <div class="project-top">
+            <span class="project-badge">Kotlin · Android</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI-dui-hua_APP · 角色扮演 App</h3>
+          <p>
+            真能装进手机的安卓角色扮演应用：角色卡、世界书、L0–L5 分层记忆全在本机，API Key 锁进 Android Keystore，没有服务端也没有账号体系。Release 里直接下 APK 就能用。
+          </p>
+          <ul class="metrics">
+            <li><strong>7.3 MB</strong><span>APK · 自带 FTS5</span></li>
+            <li><strong>L0–L5</strong><span>分层记忆</span></li>
+            <li><strong>0</strong><span>服务端 · 0 账号</span></li>
+          </ul>
+          <div class="tags"><span>本地优先</span><span>酒馆卡导入</span><span>手写 SSE</span></div>
+          <div class="repo-actions">
+            <button class="repo-jump" type="button" data-repo="app">仓库介绍</button>
+            <a class="project-link" href="https://github.com/han0han0le0ni/AI-dui-hua_APP/releases/latest" target="_blank" rel="noreferrer">下载 APK →</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -238,6 +259,7 @@
         <button class="repo-tab is-active" type="button" role="tab" aria-selected="true" data-repo="neuron">shen-jing-yuan</button>
         <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="daughter">dsh-daughter</button>
         <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="platform">ai-work-platform</button>
+        <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="app">AI-dui-hua_APP</button>
       </div>
 
       <div class="repo-panels">
@@ -293,6 +315,26 @@
           <div class="repo-foot">
             <div class="tags"><span>Go</span><span>JSON-RPC</span><span>微内核</span><span>终端 TUI</span></div>
             <a class="project-link" href="https://github.com/han0han0le0ni/ai-work-platform" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
+          </div>
+        </article>
+
+        <article class="repo-panel" role="tabpanel" data-panel="app" hidden>
+          <h3>一个能离线运行的手机角色扮演应用</h3>
+          <p class="repo-summary">
+            Kotlin + Jetpack Compose 写的安卓应用（v1.2.8）：角色、会话、消息、记忆全部存在本机 Room 数据库，
+            API Key 走 Android Keystore。没有服务端、没有账号，填一个自己的模型 Key 就能开始。
+          </p>
+          <ul class="repo-points">
+            <li><strong>对话：</strong>单角色与多角色群聊，流式输出可随时打断；消息可编辑、重生成、从这里继续；线性截断配内存撤销栈，一键还原，不做分支树。</li>
+            <li><strong>角色：</strong>酒馆卡 JSON / PNG 导入，兼容 V1 / V2 / V3 和 character_book 世界书；支持 {{char}}、{{user}}、{{date}} 等宏，世界书按关键词触发并按优先级分预算。</li>
+            <li><strong>记忆：</strong>L0–L5 六层，每 8 轮或 10 分钟后台抽取一次，走 ADD / UPDATE / DELETE / NOOP 对账；FTS5 逐字分词配 bm25 排序粗筛，每条记忆都能追到来源消息。</li>
+            <li><strong>工程：</strong>Room 2.8.5 + KSP，SQLite 用 sqlite-bundled 自带（系统版没有 FTS5），网络 OkHttp 5 + 手写 SSE；APK 约 7.3MB，其中约 5MB 是四个 ABI 的原生库。</li>
+            <li><strong>隐私：</strong>数据只在本机，卸载即丢失，所以要自己定期备份；Key 不写日志、不进备份明文，除你自己配的模型接口外不外发数据。</li>
+            <li><strong>限制：</strong>角色卡只导入不导出；alternate_greetings / use_regex / secondary_keys 会被忽略；群聊每轮需要手动指定发言人。</li>
+          </ul>
+          <div class="repo-foot">
+            <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Room + FTS5</span><span>本地优先</span></div>
+            <a class="project-link" href="https://github.com/han0han0le0ni/AI-dui-hua_APP/releases/latest" target="_blank" rel="noreferrer">下载最新 APK →</a>
           </div>
         </article>
       </div>
