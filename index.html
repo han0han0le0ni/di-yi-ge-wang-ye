@@ -265,31 +265,45 @@
       <div class="repo-panels">
         <article class="repo-panel is-active" role="tabpanel" data-panel="neuron">
           <div class="repo-visual" aria-hidden="true">
-            <svg viewBox="0 0 640 160" fill="none" preserveAspectRatio="xMidYMid meet">
-              <g stroke="currentColor" stroke-opacity="0.22" stroke-width="1.2">
-                <path d="M70 112 168 64 252 120 340 52 430 110 520 70 588 118" />
-                <path d="M168 64 118 22" />
-                <path d="M252 120 300 150" />
-                <path d="M430 110 468 34" />
-              </g>
-              <g fill="currentColor">
-                <circle class="rv-node" cx="70" cy="112" r="6" />
-                <circle class="rv-node" cx="168" cy="64" r="5" style="animation-delay:.5s" />
-                <circle class="rv-node" cx="252" cy="120" r="6.5" style="animation-delay:1s" />
-                <circle class="rv-node" cx="340" cy="52" r="5" style="animation-delay:1.5s" />
-                <circle class="rv-node" cx="430" cy="110" r="6" style="animation-delay:2s" />
-                <circle class="rv-node" cx="520" cy="70" r="5" style="animation-delay:2.5s" />
-                <circle class="rv-node" cx="588" cy="118" r="5.5" style="animation-delay:3s" />
-                <circle class="rv-node" cx="118" cy="22" r="4" style="animation-delay:1.2s" />
-                <circle class="rv-node" cx="300" cy="150" r="4" style="animation-delay:2.2s" />
-                <circle class="rv-node" cx="468" cy="34" r="4" style="animation-delay:.7s" />
-              </g>
-              <g fill="currentColor">
-                <circle r="3.4"><animateMotion dur="3s" repeatCount="indefinite" path="M70 112 168 64 252 120 340 52 430 110 520 70 588 118" /></circle>
-                <circle r="2.6" fill-opacity="0.55"><animateMotion dur="4.2s" begin="1.2s" repeatCount="indefinite" path="M168 64 252 120 340 52" /></circle>
-                <circle r="2.2" fill-opacity="0.4"><animateMotion dur="5s" begin="2.4s" repeatCount="indefinite" path="M430 110 468 34" /></circle>
-              </g>
-            </svg>
+          <svg viewBox="0 0 640 168" fill="none" preserveAspectRatio="xMidYMid meet">
+      <defs><filter id="rvnGlow" x="-70%" y="-70%" width="240%" height="240%">
+        <feGaussianBlur stdDeviation="2.6" result="b" />
+        <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+      </filter></defs>
+      <g class="rv-link" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 118 168 66 252 124 340 52 430 112 520 72 592 120" />
+        <path d="M168 66 118 22" />
+        <path d="M252 124 300 152" />
+        <path d="M430 112 468 34" />
+      </g>
+      <g class="rv-surge" stroke-linejoin="round">
+        <path d="M70 118 168 66 252 124 340 52 430 112 520 72 592 120" />
+        <path d="M430 112 468 34" style="animation-delay:1.4s" />
+      </g>
+      <g stroke="currentColor" fill="none" stroke-width="1">
+        <circle class="rv-ring" cx="252" cy="124" r="9" />
+        <circle class="rv-ring" cx="340" cy="52" r="9" style="animation-delay:1.1s" />
+        <circle class="rv-ring" cx="520" cy="72" r="9" style="animation-delay:2.2s" />
+      </g>
+      <g fill="currentColor">
+        <circle class="rv-node" cx="70" cy="118" r="6" />
+        <circle class="rv-node" cx="168" cy="66" r="5" style="animation-delay:.5s" />
+        <circle class="rv-node" cx="252" cy="124" r="6.5" style="animation-delay:1s" />
+        <circle class="rv-node" cx="340" cy="52" r="5" style="animation-delay:1.5s" />
+        <circle class="rv-node" cx="430" cy="112" r="6" style="animation-delay:2s" />
+        <circle class="rv-node" cx="520" cy="72" r="5" style="animation-delay:2.5s" />
+        <circle class="rv-node" cx="592" cy="120" r="5.5" style="animation-delay:3s" />
+        <circle class="rv-node" cx="118" cy="22" r="4" style="animation-delay:1.2s" />
+        <circle class="rv-node" cx="300" cy="152" r="4" style="animation-delay:2.2s" />
+        <circle class="rv-node" cx="468" cy="34" r="4" style="animation-delay:.7s" />
+      </g>
+      <g fill="currentColor" filter="url(#rvnGlow)">
+        <circle r="3.6"><animateMotion dur="3.2s" repeatCount="indefinite" path="M70 118 168 66 252 124 340 52 430 112 520 72 592 120" /></circle>
+        <circle r="2.4" fill-opacity="0.6"><animateMotion dur="3.2s" begin="-1.2s" repeatCount="indefinite" path="M70 118 168 66 252 124 340 52 430 112 520 72 592 120" /></circle>
+        <circle r="2.6" fill-opacity="0.6"><animateMotion dur="4.4s" begin="1.2s" repeatCount="indefinite" path="M168 66 252 124 340 52" /></circle>
+        <circle r="2.2" fill-opacity="0.45"><animateMotion dur="5.2s" begin="2.6s" repeatCount="indefinite" path="M430 112 468 34" /></circle>
+      </g>
+    </svg>
           </div>
           <h3>一团自己玩出来的神经元</h3>
           <p class="repo-summary">
@@ -309,35 +323,50 @@
 
         <article class="repo-panel" role="tabpanel" data-panel="daughter" hidden>
           <div class="repo-visual" aria-hidden="true">
-            <svg viewBox="0 0 640 160" fill="none">
-              <g stroke="currentColor">
-                <circle cx="320" cy="80" r="34" stroke-opacity="0.2" />
-                <circle cx="320" cy="80" r="52" stroke-opacity="0.1" stroke-dasharray="2 7" />
-              </g>
-              <circle class="rv-core" cx="320" cy="80" r="17" fill="currentColor" fill-opacity="0.16" stroke="currentColor" stroke-opacity="0.55" />
-              <circle cx="320" cy="80" r="5" fill="currentColor" />
-              <g fill="currentColor">
-                <circle r="3"><animateMotion dur="9s" repeatCount="indefinite" path="M320 80 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0" /></circle>
-                <circle r="2.2" fill-opacity="0.6"><animateMotion dur="13s" begin="2.5s" repeatCount="indefinite" path="M320 80 m-52 0 a52 52 0 1 1 104 0 a52 52 0 1 1 -104 0" /></circle>
-              </g>
-              <g fill="currentColor" fill-opacity="0.25">
-                <rect x="34" y="30" width="46" height="16" rx="8" />
-                <rect x="52" y="66" width="38" height="14" rx="7" />
-                <rect x="30" y="102" width="52" height="16" rx="8" />
-              </g>
-              <g class="rv-bubble">
-                <rect x="392" y="34" width="66" height="30" rx="15" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.35" />
-                <circle cx="413" cy="49" r="2.6" fill="currentColor" />
-                <circle cx="425" cy="49" r="2.6" fill="currentColor" fill-opacity="0.7" />
-                <circle cx="437" cy="49" r="2.6" fill="currentColor" fill-opacity="0.4" />
-              </g>
-              <g class="rv-bubble" style="animation-delay:3.5s">
-                <rect x="404" y="86" width="48" height="26" rx="13" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-opacity="0.25" />
-                <circle cx="417" cy="99" r="2.2" fill="currentColor" fill-opacity="0.7" />
-                <circle cx="428" cy="99" r="2.2" fill="currentColor" fill-opacity="0.45" />
-                <circle cx="439" cy="99" r="2.2" fill="currentColor" fill-opacity="0.25" />
-              </g>
-            </svg>
+          <svg viewBox="0 0 640 168" fill="none">
+      <defs>
+        <radialGradient id="rvdCore">
+          <stop offset="0" stop-color="currentColor" stop-opacity="0.5" />
+          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+        </radialGradient>
+        <filter id="rvdGlow" x="-70%" y="-70%" width="240%" height="240%">
+        <feGaussianBlur stdDeviation="2.4" result="b" />
+        <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+      </filter>
+      </defs>
+      <circle cx="320" cy="86" r="66" fill="url(#rvdCore)" opacity="0.5" />
+      <g stroke="currentColor" fill="none">
+        <circle cx="320" cy="86" r="34" stroke-opacity="0.22" />
+        <circle cx="320" cy="86" r="50" stroke-opacity="0.12" stroke-dasharray="2 7" />
+      </g>
+      <g stroke="currentColor" fill="none" stroke-width="1.1">
+        <circle class="rv-ring" cx="320" cy="86" r="28" />
+        <circle class="rv-ring" cx="320" cy="86" r="28" style="animation-delay:2.2s" />
+      </g>
+      <circle class="rv-core" cx="320" cy="86" r="21" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-opacity="0.6" />
+      <circle cx="320" cy="86" r="5.5" fill="currentColor" filter="url(#rvdGlow)" />
+      <g fill="currentColor" filter="url(#rvdGlow)">
+        <circle r="3.4"><animateMotion dur="9s" repeatCount="indefinite" path="M320 86 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0" /></circle>
+        <circle r="2.2" fill-opacity="0.55"><animateMotion dur="13s" begin="2.5s" repeatCount="indefinite" path="M320 86 m-50 0 a50 50 0 1 1 100 0 a50 50 0 1 1 -100 0" /></circle>
+      </g>
+      <g fill="currentColor">
+        <g class="rv-float"><rect x="42" y="44" width="54" height="18" rx="9" fill-opacity="0.16" /><rect x="52" y="51" width="34" height="3" rx="1.5" fill-opacity="0.5" /></g>
+        <g class="rv-float" style="animation-delay:2.1s"><rect x="60" y="82" width="44" height="16" rx="8" fill-opacity="0.12" /></g>
+        <g class="rv-float" style="animation-delay:4.2s"><rect x="38" y="114" width="58" height="18" rx="9" fill-opacity="0.16" /></g>
+      </g>
+      <g class="rv-bubble">
+        <rect x="396" y="38" width="74" height="32" rx="16" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.4" />
+        <circle class="rv-dot" cx="416" cy="54" r="2.8" fill="currentColor" />
+        <circle class="rv-dot" cx="429" cy="54" r="2.8" fill="currentColor" style="animation-delay:.2s" />
+        <circle class="rv-dot" cx="442" cy="54" r="2.8" fill="currentColor" style="animation-delay:.4s" />
+      </g>
+      <g class="rv-bubble" style="animation-delay:3.5s">
+        <rect x="410" y="92" width="56" height="28" rx="14" fill="currentColor" fill-opacity="0.07" stroke="currentColor" stroke-opacity="0.22" />
+        <circle cx="424" cy="106" r="2.4" fill="currentColor" fill-opacity="0.6" />
+        <circle cx="434" cy="106" r="2.4" fill="currentColor" fill-opacity="0.4" />
+        <circle cx="444" cy="106" r="2.4" fill="currentColor" fill-opacity="0.22" />
+      </g>
+    </svg>
           </div>
           <h3>给 DSH 的长期人格与记忆</h3>
           <p class="repo-summary">
@@ -359,35 +388,53 @@
 
         <article class="repo-panel" role="tabpanel" data-panel="platform" hidden>
           <div class="repo-visual" aria-hidden="true">
-            <svg viewBox="0 0 640 160" fill="none">
-              <g stroke="currentColor" stroke-opacity="0.22" stroke-width="1.2">
-                <path d="M170 52 H250" />
-                <path d="M170 108 H250" />
-                <path d="M390 52 H470" />
-                <path d="M390 108 H470" />
-                <path d="M320 46 V114" stroke-dasharray="3 6" stroke-opacity="0.12" />
-              </g>
-              <rect x="250" y="48" width="140" height="64" rx="10" stroke="currentColor" stroke-opacity="0.45" fill="currentColor" fill-opacity="0.06" />
-              <text x="320" y="85" text-anchor="middle" font-size="11" letter-spacing="1" fill="currentColor" fill-opacity="0.8" font-family="ui-monospace, monospace">CORE</text>
-              <g stroke="currentColor" stroke-opacity="0.35" fill="currentColor" fill-opacity="0.05">
-                <rect x="80" y="38" width="90" height="28" rx="7" />
-                <rect x="80" y="94" width="90" height="28" rx="7" />
-                <rect x="470" y="38" width="90" height="28" rx="7" />
-                <rect x="470" y="94" width="90" height="28" rx="7" />
-              </g>
-              <g fill="currentColor" fill-opacity="0.55" font-size="9" text-anchor="middle" font-family="ui-monospace, monospace">
-                <text x="125" y="56">plugin</text>
-                <text x="125" y="112">plugin</text>
-                <text x="515" y="56">plugin</text>
-                <text x="515" y="112">plugin</text>
-              </g>
-              <g fill="currentColor">
-                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" repeatCount="indefinite" path="M170 52 H250" /></rect>
-                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" begin="0.5s" repeatCount="indefinite" path="M170 108 H250" /></rect>
-                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M390 52 H470" /></rect>
-                <rect width="10" height="4" rx="2" y="-2"><animateMotion dur="2.2s" begin="1.6s" repeatCount="indefinite" path="M390 108 H470" /></rect>
-              </g>
-            </svg>
+          <svg viewBox="0 0 640 168" fill="none">
+      <defs>
+        <linearGradient id="rvpCore" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="currentColor" stop-opacity="0.16" />
+          <stop offset="1" stop-color="currentColor" stop-opacity="0.03" />
+        </linearGradient>
+        <filter id="rvpGlow" x="-70%" y="-70%" width="240%" height="240%">
+        <feGaussianBlur stdDeviation="2.4" result="b" />
+        <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+      </filter>
+      </defs>
+      <g class="rv-link">
+        <path d="M170 56 H250" /><path d="M170 112 H250" /><path d="M390 56 H470" /><path d="M390 112 H470" />
+        <path d="M320 44 V124" stroke-dasharray="3 6" stroke-opacity="0.12" />
+      </g>
+      <g class="rv-surge" style="stroke-dasharray:18 240; animation-duration:2.2s">
+        <path d="M170 56 H250" /><path d="M170 112 H250" style="animation-delay:.55s" />
+        <path d="M390 56 H470" style="animation-delay:1.1s" /><path d="M390 112 H470" style="animation-delay:1.65s" />
+      </g>
+      <rect x="250" y="52" width="140" height="64" rx="10" stroke="currentColor" stroke-opacity="0.5" fill="url(#rvpCore)" />
+      <rect x="258" y="58" width="124" height="2" rx="1" fill="currentColor" fill-opacity="0.25" />
+      <text x="320" y="90" text-anchor="middle" font-size="11" letter-spacing="2" fill="currentColor" fill-opacity="0.85" font-family="ui-monospace, monospace">CORE</text>
+      <g stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.05">
+        <rect x="80" y="42" width="90" height="28" rx="7" />
+        <rect x="80" y="98" width="90" height="28" rx="7" />
+        <rect x="470" y="42" width="90" height="28" rx="7" />
+        <rect x="470" y="98" width="90" height="28" rx="7" />
+      </g>
+      <g fill="currentColor" fill-opacity="0.55" font-size="9" text-anchor="middle" font-family="ui-monospace, monospace">
+        <text x="125" y="60">plugin</text>
+        <text x="125" y="116">plugin</text>
+        <text x="515" y="60">plugin</text>
+        <text x="515" y="116">plugin</text>
+      </g>
+      <g fill="currentColor">
+        <circle class="rv-dot" cx="163" cy="49" r="2.6" />
+        <circle class="rv-dot" cx="163" cy="105" r="2.6" style="animation-delay:.4s" />
+        <circle class="rv-dot" cx="553" cy="49" r="2.6" style="animation-delay:.8s" />
+        <circle class="rv-dot" cx="553" cy="105" r="2.6" style="animation-delay:1.2s" />
+      </g>
+      <g fill="currentColor" filter="url(#rvpGlow)">
+        <rect width="12" height="5" rx="2.5" y="-2.5"><animateMotion dur="2.2s" repeatCount="indefinite" path="M170 56 H250" /></rect>
+        <rect width="12" height="5" rx="2.5" y="-2.5"><animateMotion dur="2.2s" begin="0.55s" repeatCount="indefinite" path="M170 112 H250" /></rect>
+        <rect width="12" height="5" rx="2.5" y="-2.5"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M390 56 H470" /></rect>
+        <rect width="12" height="5" rx="2.5" y="-2.5"><animateMotion dur="2.2s" begin="1.65s" repeatCount="indefinite" path="M390 112 H470" /></rect>
+      </g>
+    </svg>
           </div>
           <h3>只认协议和 manifest 的微内核</h3>
           <p class="repo-summary">
@@ -409,29 +456,50 @@
 
         <article class="repo-panel" role="tabpanel" data-panel="app" hidden>
           <div class="repo-visual" aria-hidden="true">
-            <svg viewBox="0 0 640 160" fill="none">
-              <rect x="150" y="28" width="80" height="104" rx="12" stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.04" />
-              <rect x="178" y="36" width="24" height="3" rx="1.5" fill="currentColor" fill-opacity="0.35" />
-              <rect x="164" y="50" width="52" height="10" rx="5" fill="currentColor" fill-opacity="0.16" />
-              <rect x="164" y="66" width="40" height="10" rx="5" fill="currentColor" fill-opacity="0.1" />
-              <rect x="176" y="82" width="40" height="10" rx="5" fill="currentColor" fill-opacity="0.16" />
-              <rect x="164" y="98" width="46" height="10" rx="5" fill="currentColor" fill-opacity="0.1" />
-              <rect x="182" y="120" width="16" height="4" rx="2" fill="currentColor" fill-opacity="0.4" />
-              <g stroke="currentColor" stroke-opacity="0.18" stroke-dasharray="3 6">
-                <path d="M232 102 H258" />
-                <path d="M232 118 H272" />
-              </g>
-              <g>
-                <rect class="rv-msg" x="270" y="38" width="128" height="24" rx="12" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-opacity="0.28" />
-                <rect class="rv-msg" style="animation-delay:1.6s" x="316" y="76" width="150" height="24" rx="12" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-opacity="0.22" />
-                <rect class="rv-msg" style="animation-delay:3.2s" x="286" y="114" width="112" height="24" rx="12" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-opacity="0.28" />
-              </g>
-              <g fill="currentColor" fill-opacity="0.45" font-size="9" font-family="ui-monospace, monospace">
-                <text x="500" y="52">local</text>
-                <text x="500" y="90">FTS5</text>
-                <text x="500" y="128">no server</text>
-              </g>
-            </svg>
+          <svg viewBox="0 0 640 168" fill="none">
+      <defs>
+        <linearGradient id="rvaScreen" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="currentColor" stop-opacity="0.1" />
+          <stop offset="1" stop-color="currentColor" stop-opacity="0.02" />
+        </linearGradient>
+        <filter id="rvaGlow" x="-70%" y="-70%" width="240%" height="240%">
+        <feGaussianBlur stdDeviation="2.4" result="b" />
+        <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+      </filter>
+      </defs>
+      <rect x="112" y="30" width="86" height="110" rx="13" stroke="currentColor" stroke-opacity="0.45" fill="url(#rvaScreen)" />
+      <rect x="142" y="38" width="26" height="3" rx="1.5" fill="currentColor" fill-opacity="0.35" />
+      <rect x="124" y="54" width="30" height="16" rx="8" fill="currentColor" fill-opacity="0.18" />
+      <rect x="160" y="76" width="28" height="16" rx="8" fill="currentColor" fill-opacity="0.1" />
+      <rect x="124" y="98" width="26" height="16" rx="8" fill="currentColor" fill-opacity="0.18" />
+      <rect class="rv-caret" x="156" y="120" width="5" height="12" rx="2" fill="currentColor" fill-opacity="0.65" />
+      <rect x="146" y="136" width="18" height="3" rx="1.5" fill="currentColor" fill-opacity="0.35" />
+      <g class="rv-link" stroke-dasharray="3 6">
+        <path d="M198 62 H252" /><path d="M198 84 H300" /><path d="M198 108 H268" />
+      </g>
+      <g>
+        <g class="rv-msg">
+          <rect x="252" y="44" width="150" height="34" rx="14" fill="currentColor" fill-opacity="0.13" stroke="currentColor" stroke-opacity="0.3" />
+          <rect x="266" y="54" width="96" height="4" rx="2" fill="currentColor" fill-opacity="0.5" />
+          <rect x="266" y="64" width="62" height="4" rx="2" fill="currentColor" fill-opacity="0.32" />
+        </g>
+        <g class="rv-msg" style="animation-delay:1.7s">
+          <rect x="300" y="92" width="164" height="30" rx="14" fill="currentColor" fill-opacity="0.09" stroke="currentColor" stroke-opacity="0.22" />
+          <rect x="314" y="107" width="110" height="4" rx="2" fill="currentColor" fill-opacity="0.42" />
+        </g>
+        <g class="rv-msg" style="animation-delay:3.4s">
+          <rect x="268" y="128" width="120" height="26" rx="13" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.26" />
+          <rect x="282" y="139" width="76" height="4" rx="2" fill="currentColor" fill-opacity="0.45" />
+        </g>
+      </g>
+      <g stroke="currentColor" stroke-opacity="0.14"><path d="M470 56 H486" /><path d="M470 92 H486" /><path d="M470 128 H486" /></g>
+      <g fill="currentColor" fill-opacity="0.45" font-size="9" font-family="ui-monospace, monospace">
+        <text x="492" y="60">local db</text>
+        <text x="492" y="96">FTS5</text>
+        <text x="492" y="132">no server</text>
+      </g>
+      <circle cx="424" cy="107" r="3.2" fill="currentColor" filter="url(#rvaGlow)" class="rv-dot" />
+    </svg>
           </div>
           <h3>一个能离线运行的手机角色扮演应用</h3>
           <p class="repo-summary">
