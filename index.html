@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>汗汗了你 · 把想法交给 AI 的实验记录</title>
-  <meta name="description" content="汗汗了你（@han0han0le0ni）的个人主页：不写代码，负责想法、边界与验收。记录神经元模拟、DSH 人格记忆插件、AI 微内核工作台和安卓角色扮演 App 四个长期实验。" />
+  <meta name="description" content="汗汗了你（@han0han0le0ni）的个人主页：不写代码，负责想法、边界与验收。记录神经元模拟、DSH 人格记忆插件、AI 微内核工作台、安卓角色扮演 App 和本地大模型网关五个长期实验。" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -45,11 +45,11 @@
         </p>
         <p class="lead">
           我不写代码，代码交给 AI；我负责把念头说清楚、把边界定住，再把结果挑到能用为止。
-          这里记录的不是教程，而是四个从「要是……会怎样」开始，真的跑起来了的实验。
+          这里记录的不是教程，而是五个从「要是……会怎样」开始，真的跑起来了的实验。
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="#projects">
-            看四个长期实验
+            看五个长期实验
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -64,7 +64,7 @@
 
         <ul class="stats">
           <li>
-            <strong data-count="6" data-suffix=" 个">0</strong>
+            <strong data-count="7" data-suffix=" 个">0</strong>
             <span>公开仓库</span>
           </li>
           <li>
@@ -109,11 +109,11 @@
             神经元实验留下了 142 份 CSV 和 31 项测试，30 个随机种子都跨过了 200 步延迟奖励；桌宠插件把 L1–L5 人格分层和长期记忆做进 DSH，309 项测试全绿，外部连接通了 4/7。
           </p>
           <p>
-            微内核更像一次收尾练习：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不启动 HTTP 服务。还有一个真能装进手机的安卓角色扮演 App，数据全在本机。四个项目都在 GitHub 留了完整记录，包括失败的数据。
+            微内核更像一次收尾练习：核心只认 JSON-RPC 2.0 和 manifest.json，不认识 AI，也不启动 HTTP 服务。还有一个真能装进手机的安卓角色扮演 App，数据全在本机；最近这个是本地大模型网关，自己拉起 llama-server，把模型用 OpenAI 兼容接口共享给手机。五个项目都在 GitHub 留了完整记录，包括失败的数据。
           </p>
         </div>
         <ul class="facts">
-          <li><span>GitHub</span><strong>@han0han0le0ni · 6 个公开仓库</strong></li>
+          <li><span>GitHub</span><strong>@han0han0le0ni · 7 个公开仓库</strong></li>
           <li><span>位置</span><strong>中国 · 地球</strong></li>
           <li><span>我的角色</span><strong>出想法 · 定边界 · 做验收</strong></li>
           <li><span>代码作者</span><strong>AI</strong></li>
@@ -163,8 +163,28 @@
 
     <section id="projects" class="section reveal">
       <p class="eyebrow">03 / 项目</p>
-      <h2>四个把想法变成东西的实验</h2>
+      <h2>五个把想法变成东西的实验</h2>
       <div class="project-grid">
+        <article class="project">
+          <div class="project-top">
+            <span class="project-badge">Go · Wails · Vue3</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>llamadock · 本地大模型网关</h3>
+          <p>
+            把本机的 GGUF 模型变成一个 OpenAI 兼容接口，共享给客厅里的手机、平板和旧笔记本。llama-server 由它自己拉起和回收，显存、上下文、模板全摆在面板上——不依赖 LM Studio、Ollama，也不依赖 Python。
+          </p>
+          <ul class="metrics">
+            <li><strong>87</strong><span>个参数可视化</span></li>
+            <li><strong>1</strong><span>个 exe · 0 外部框架</span></li>
+            <li><strong>0</strong><span>API Key · 局域网直连</span></li>
+          </ul>
+          <div class="tags"><span>GGUF</span><span>OpenAI 兼容</span><span>显存算式</span></div>
+          <div class="repo-actions">
+            <button class="repo-jump" type="button" data-repo="dock">仓库介绍</button>
+            <a class="project-link" href="https://github.com/han0han0le0ni/llamadock" target="_blank" rel="noreferrer">GitHub →</a>
+          </div>
+        </article>
         <article class="project">
           <div class="project-top">
             <span class="project-badge">C · C++ · Python</span>
@@ -260,6 +280,7 @@
         <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="daughter">dsh-daughter</button>
         <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="platform">ai-work-platform</button>
         <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="app">AI-dui-hua_APP</button>
+        <button class="repo-tab" type="button" role="tab" aria-selected="false" data-repo="dock">llamadock</button>
       </div>
 
       <div class="repo-panels">
@@ -523,6 +544,89 @@
           <div class="repo-foot">
             <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Room + FTS5</span><span>本地优先</span></div>
             <a class="project-link" href="https://github.com/han0han0le0ni/AI-dui-hua_APP/releases/latest" target="_blank" rel="noreferrer">下载最新 APK →</a>
+          </div>
+        </article>
+
+        <article class="repo-panel" role="tabpanel" data-panel="dock" hidden>
+          <div class="repo-visual" aria-hidden="true">
+            <svg viewBox="0 0 640 168" fill="none">
+              <defs>
+                <filter id="rvkGlow" x="-70%" y="-70%" width="240%" height="240%">
+                  <feGaussianBlur stdDeviation="2.4" result="b" />
+                  <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+              </defs>
+              <rect x="34" y="44" width="76" height="80" rx="8" stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.05" />
+              <text x="72" y="62" text-anchor="middle" font-size="9" letter-spacing="1" fill="currentColor" fill-opacity="0.6" font-family="ui-monospace, monospace">GGUF</text>
+              <g fill="currentColor" fill-opacity="0.32">
+                <rect x="46" y="72" width="52" height="6" rx="3" />
+                <rect x="46" y="86" width="40" height="6" rx="3" />
+                <rect x="46" y="100" width="46" height="6" rx="3" />
+              </g>
+              <text x="72" y="117" text-anchor="middle" font-size="8" fill="currentColor" fill-opacity="0.4" font-family="ui-monospace, monospace">.gguf</text>
+
+              <g class="rv-link"><path d="M110 84 H172" /></g>
+              <g class="rv-surge" style="stroke-dasharray:16 240; animation-duration:2.4s"><path d="M110 84 H172" /></g>
+
+              <rect x="172" y="46" width="150" height="76" rx="10" stroke="currentColor" stroke-opacity="0.45" fill="currentColor" fill-opacity="0.04" />
+              <text x="182" y="62" font-size="9" fill="currentColor" fill-opacity="0.55" font-family="ui-monospace, monospace">GPU</text>
+              <text x="312" y="62" text-anchor="end" font-size="8" fill="currentColor" fill-opacity="0.4" font-family="ui-monospace, monospace">8 GB</text>
+              <rect x="182" y="72" width="130" height="10" rx="5" fill="currentColor" fill-opacity="0.08" />
+              <rect class="rv-vram" x="182" y="72" width="130" height="10" rx="5" fill="currentColor" fill-opacity="0.45" />
+              <text x="247" y="102" text-anchor="middle" font-size="8" fill="currentColor" fill-opacity="0.45" font-family="ui-monospace, monospace">n_gpu_layers 31 / 32</text>
+              <rect x="182" y="110" width="130" height="2" rx="1" fill="currentColor" fill-opacity="0.18" />
+
+              <g class="rv-link"><path d="M322 84 H356" /></g>
+              <g class="rv-surge" style="stroke-dasharray:12 240; animation-duration:2.8s"><path d="M322 84 H356" /></g>
+
+              <rect x="356" y="60" width="78" height="48" rx="9" stroke="currentColor" stroke-opacity="0.5" fill="currentColor" fill-opacity="0.06" />
+              <text x="395" y="82" text-anchor="middle" font-size="9" fill="currentColor" fill-opacity="0.7" font-family="ui-monospace, monospace">:8080</text>
+              <text x="395" y="96" text-anchor="middle" font-size="8" fill="currentColor" fill-opacity="0.4" font-family="ui-monospace, monospace">/v1</text>
+
+              <g class="rv-link">
+                <path d="M434 84 C 456 84 466 54 492 52" />
+                <path d="M434 84 H 512" />
+                <path d="M434 84 C 456 84 466 122 488 136" />
+              </g>
+              <g class="rv-surge" style="stroke-dasharray:14 240; animation-duration:2.6s">
+                <path d="M434 84 C 456 84 466 54 492 52" />
+                <path d="M434 84 H 512" style="animation-delay:.5s" />
+                <path d="M434 84 C 456 84 466 122 488 136" style="animation-delay:1s" />
+              </g>
+
+              <rect x="496" y="26" width="34" height="58" rx="6" stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.05" />
+              <rect x="508" y="32" width="10" height="2" rx="1" fill="currentColor" fill-opacity="0.3" />
+              <rect x="516" y="78" width="64" height="36" rx="4" stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.05" />
+              <rect x="508" y="116" width="80" height="4" rx="2" fill="currentColor" fill-opacity="0.3" />
+              <rect x="492" y="124" width="46" height="34" rx="5" stroke="currentColor" stroke-opacity="0.4" fill="currentColor" fill-opacity="0.05" />
+              <g fill="currentColor" fill-opacity="0.4" font-size="7" font-family="ui-monospace, monospace">
+                <text x="513" y="74" text-anchor="middle">phone</text>
+                <text x="548" y="100" text-anchor="middle">laptop</text>
+                <text x="515" y="145" text-anchor="middle">tablet</text>
+              </g>
+              <g stroke="currentColor" fill="none" stroke-width="1">
+                <circle class="rv-ring" cx="513" cy="52" r="8" />
+                <circle class="rv-ring" cx="548" cy="96" r="8" style="animation-delay:1.1s" />
+                <circle class="rv-ring" cx="515" cy="141" r="8" style="animation-delay:2.2s" />
+              </g>
+              <circle cx="434" cy="84" r="3" fill="currentColor" filter="url(#rvkGlow)" class="rv-dot" />
+            </svg>
+          </div>
+          <h3>把本机模型变成局域网里的 OpenAI 接口</h3>
+          <p class="repo-summary">
+            Go + Wails 写的单文件程序：选一个本地 GGUF，它自己拼启动参数、拉起 llama-server，再对外开一个
+            OpenAI 兼容网关。手机只改 Base URL、Key 留空就能用，既不用装 Ollama，也不用敲命令行。
+          </p>
+          <ul class="repo-points">
+            <li><strong>参数：</strong>87 个参数只在 internal/params/defs.go 声明一次，UI、校验、Schema、下发全由注册表生成；n_gpu_layers / n_ctx / cache_type_* 这类加载级参数任何请求都改不动，界面上直接标锁。</li>
+            <li><strong>推荐：</strong>读显存和 GGUF 头部之后用纯算术算层数、上下文、KV 缓存量化，每一项都能展开看代入的算式，例如「4.7GB ÷ 32 层 = 147MB/层 → 收敛到 31 层」。</li>
+            <li><strong>模板：</strong>转发前把 system 消息提到首位、按模型名自动套模板、内置模板库加「通用宽松」兜底，再把 Jinja 报错翻成中文——手机客户端最常见的模板报错基本消失。</li>
+            <li><strong>接入：</strong>网关只有 :8080，支持 SSE 流式 / NDJSON / 纯文本 / 单次 JSON；管理台和端口池都只绑回环，局域网只暴露推理接口。实测在 RTX 5060 8GB 上自动选中 cuda12 运行时。</li>
+            <li><strong>限制：</strong>无鉴权、无来源过滤、明文 HTTP，定位就是家里自己用；一次只跑一个模型（换模型等于重启子进程）；不下载模型也不带运行时，llama-server.exe 要自己放。</li>
+          </ul>
+          <div class="repo-foot">
+            <div class="tags"><span>Go</span><span>llama.cpp</span><span>Wails</span><span>OpenAI API</span></div>
+            <a class="project-link" href="https://github.com/han0han0le0ni/llamadock" target="_blank" rel="noreferrer">去 GitHub 看源码 →</a>
           </div>
         </article>
       </div>
