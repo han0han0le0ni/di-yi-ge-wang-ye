@@ -975,3 +975,20 @@ footer {
   55%, 90% { transform: scaleX(0.94); }
   100% { transform: scaleX(0.12); }
 }
+
+/* ---------- ComfyUI 进度与出图 ---------- */
+.rv-fill {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: rv-vram 5.6s ease-in-out infinite;
+}
+
+.rv-img {
+  animation: rv-img 5.6s ease-in-out infinite;
+}
+
+@keyframes rv-img {
+  0%, 35% { opacity: 0.12; }
+  70%, 90% { opacity: 0.85; }
+  100% { opacity: 0.12; }
+}
