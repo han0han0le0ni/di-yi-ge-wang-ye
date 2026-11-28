@@ -1015,3 +1015,37 @@ footer {
   opacity: 0.6;
   border-top: 1px solid var(--line);
 }
+
+/* ---------- 截图网格 ---------- */
+.shot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 4px 0 22px;
+}
+
+.shot-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #0d0b0a;
+}
+
+.shot-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shot-grid figcaption {
+  padding: 8px 11px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.6;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .shot-grid { grid-template-columns: 1fr; }
+}

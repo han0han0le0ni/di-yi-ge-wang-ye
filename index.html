@@ -419,9 +419,23 @@
           </div>
           <h3>给 DSH 的长期人格与记忆</h3>
           <p class="repo-summary">
-            TypeScript 写的「大脑」插件（v0.8.0）：人格分层、性格演化、长期记忆、运行时状态、技能反射与安全降级，表现层交给桌宠端。
+            TypeScript 写的「大脑」插件（v0.8.5）：人格分层、性格演化、长期记忆、运行时状态、技能反射与安全降级，表现层交给桌宠端。
             记忆跟着角色走，不跟着会话走——换窗口、换工作区，关系和经历都还在。
           </p>
+          <div class="shot-grid">
+            <figure>
+              <img src="images/daughter-starmap.jpg" alt="DSH 脑图·九星系界面：左侧 L1 人格基础与 L2 情感关系量表，右侧按情绪与关系着色的记忆星图" width="1280" height="800" loading="lazy" />
+              <figcaption>脑图 · 九星系：L1/L2 与情绪、关系维度同屏</figcaption>
+            </figure>
+            <figure>
+              <img src="images/daughter-settings.jpg" alt="daughter 设置面板：记忆上限、合并上限、联想强度、情绪衰减等参数" width="1280" height="800" loading="lazy" />
+              <figcaption>daughter 设置：上限、衰减、联想、情绪半衰期全部可调</figcaption>
+            </figure>
+            <figure>
+              <img src="images/daughter-decay.jpg" alt="记忆衰减列表：每条记忆的相似度、情绪、重要度与衰减日志" width="1280" height="800" loading="lazy" />
+              <figcaption>记忆衰减：权重变化与「该记住什么」逐条可查</figcaption>
+            </figure>
+          </div>
           <ul class="repo-points">
             <li><strong>人格：</strong>L1–L5 分层，L1–L4 慢写回、L5 不写回；动机双通路（阈值偏移 + 方向舵乘子），外加熟悉度倒 U 和失败熔断。</li>
             <li><strong>记忆：</strong>摘要层 + 全文层双路检索，SQLite FTS5 trigram 配 Dice 相似度，五维加权并支持一二跳联想；删除可恢复，主动开口默认关闭。</li>
@@ -715,6 +729,25 @@
             DSH 插件：Host 注册 HTTP 路由，Client 注册侧边栏「ComfyUI 工作台」，Agent 注册工具。
             面板里能看显卡与队列、选工作流出图、盯进度、管本地图库，画布还能和 ComfyUI 原生界面双向同步。
           </p>
+          <div class="shot-grid">
+            <figure>
+              <img src="images/comfy-generate.jpg" alt="ComfyUI 工作台生成页：GPU/CPU 占用、提示词、工作流选择、宽高与步数等生成参数" width="1280" height="800" loading="lazy" />
+              <figcaption>生成：提示词、工作流与 GPU/CPU 实时占用</figcaption>
+            </figure>
+            <figure>
+              <img src="images/comfy-canvas.jpg" alt="工作流画布：SDXL 文生图 9 节点 10 连线，底部可编辑节点参数" width="1280" height="800" loading="lazy" />
+              <figcaption>画布：9 节点 10 连线，改控件即回写
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="images/comfy-workflow.jpg" alt="我的工作流列表与节点参数编辑：Load Checkpoint、CLIP Set Last Layer、CLIP 文本编码" width="1280" height="800" loading="lazy" />
+              <figcaption>我的工作流：节点参数直接编辑并写盘</figcaption>
+            </figure>
+            <figure>
+              <img src="images/comfy-chat.jpg" alt="对话中生成图片：AI 自选工作流后把湖边黄昏插画回传对话" width="1280" height="800" loading="lazy" />
+              <figcaption>对话里出图：AI 自选工作流后自动回传</figcaption>
+            </figure>
+          </div>
           <ul class="repo-points">
             <li><strong>状态：</strong>GPU 优先读 nvidia-smi 利用率，没 N 卡或取不到时退回显存占用；CPU 用两次采样差值算使用率，取不到时退回内存占用；ComfyUI 在线状态与队列每 4 秒刷新。</li>
             <li><strong>画布：</strong>按磁盘上的工作流 JSON 画出原生节点图，滚轮缩放、拖拽平移、框选删除、改控件回车写盘；改动会经桥接扩展实时广播到 ComfyUI，ComfyUI 保存工作流后 3 秒内自动回读。</li>
