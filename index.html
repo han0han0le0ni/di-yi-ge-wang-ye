@@ -638,6 +638,10 @@
             Go + Wails 写的单文件程序：选一个本地 GGUF，它自己拼启动参数、拉起 llama-server，再对外开一个
             OpenAI 兼容网关。手机只改 Base URL、Key 留空就能用，既不用装 Ollama，也不用敲命令行。
           </p>
+          <figure class="repo-shot">
+            <img src="images/llamadock-dashboard.png" alt="LlamaDock 管理台实机截图：仪表盘显示推理引擎离线、吞吐 0.0 t/s、显存 1.8/8.0 GB、硬件自检与手机接入二维码" width="1600" height="1000" loading="lazy" />
+            <figcaption>本机实机截图 · RTX 5060 Laptop 8GB / Ryzen 9 7845HX · 2026-11-28</figcaption>
+          </figure>
           <ul class="repo-points">
             <li><strong>参数：</strong>87 个参数只在 internal/params/defs.go 声明一次，UI、校验、Schema、下发全由注册表生成；n_gpu_layers / n_ctx / cache_type_* 这类加载级参数任何请求都改不动，界面上直接标锁。</li>
             <li><strong>推荐：</strong>读显存和 GGUF 头部之后用纯算术算层数、上下文、KV 缓存量化，每一项都能展开看代入的算式，例如「4.7GB ÷ 32 层 = 147MB/层 → 收敛到 31 层」。</li>

@@ -992,3 +992,26 @@ footer {
   70%, 90% { opacity: 0.85; }
   100% { opacity: 0.12; }
 }
+
+/* ---------- 实机截图 ---------- */
+.repo-shot {
+  margin: 4px 0 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #0d0b0a;
+}
+
+.repo-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.repo-shot figcaption {
+  padding: 9px 13px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  opacity: 0.6;
+  border-top: 1px solid var(--line);
+}
